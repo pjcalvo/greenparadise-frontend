@@ -1,0 +1,5 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/wamp/www/matterdl/cruises/node_modules/grunt-contrib-watch/tasks/lib/taskrunner.js"
+    ]
+}

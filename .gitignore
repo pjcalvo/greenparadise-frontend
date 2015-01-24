@@ -1,0 +1,9 @@
+# KG gitignore
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+node_modules
+/css/main.min.css
+/js/scripts.min.js
