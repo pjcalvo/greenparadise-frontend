@@ -1,0 +1,14 @@
+{
+  "name": "GreenParadise",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "~3.3.1"
+  },
+  "exportsOverride": {
+    "bootstrap": {
+      "js": "dist/js/bootstrap.min.js",
+	  "components": "js",
+      "less": "less"
+    }
+  }
+}

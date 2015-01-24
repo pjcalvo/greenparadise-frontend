@@ -1,0 +1,10 @@
+{
+ "qa": {
+   "username": "",
+   "password": ""
+ },  
+ "prod": {
+   "username": "",
+   "password": ""
+ }  
+}
