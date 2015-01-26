@@ -23,3 +23,24 @@ require_once locate_template('/post-types/one_day.php');// One Day Tour
 require_once locate_template('/post-types/vacation_package.php');// Vacation Packages
 require_once locate_template('/post-types/hotel.php');// Hotel
 require_once locate_template('/post-types/destination.php');// Destinations
+
+/* Add Logo Field*/
+add_action( 'customize_register', 'themename_customize_register' );
+function themename_customize_register($wp_customize) {
+
+	$wp_customize->add_section( 'ignite_custom_logo', array(
+		'title'          => 'Logo',
+		'description'    => 'Display a custom logo?',
+		'priority'       => 25,
+	) );
+
+	$wp_customize->add_setting( 'custom_logo', array(
+		'default'        => '',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'custom_logo', array(
+		'label'   => 'Custom logo',
+		'section' => 'ignite_custom_logo',
+		'settings'   => 'custom_logo',
+	) ) );
+}
