@@ -8,6 +8,19 @@
 @import "../css/plugins/icons/icons.css";
 
 /* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+	font-family: 'Gotham-Bold';
+	src:url('../fonts/Gotham/Gotham-Bold.otf');
+}
+
+@font-face {
+	font-family: 'Gotham-Book';
+	src:url('../fonts/Gotham/Gotham-Book.otf');
+}
+/* ==========================================================================
    Base
    ========================================================================== */
 
@@ -22,7 +35,7 @@ body { }
 .banner {
     padding-top: 10px;
     padding-bottom: 10px;
-    
+    background-color: #fff;
     .nav-container{
         padding-top: 25px;
     }
@@ -32,8 +45,8 @@ body { }
     color: #000;
     font-weight: 700;
     text-align: center;
-    font-size: 21.77px;
-    font-family: Gotham;
+    font-size: 15pt;
+    font-family: Gotham-Book;
     line-height: 26.827px;
     span{
             display: block;
@@ -42,9 +55,14 @@ body { }
 
 .nav-pills>li.active>a{
     color: #89c74d;
+    font-size: 16pt;
+    font-family: Gotham-Bold;
     background-color: transparent;
 }
 
+.logo a{
+    box-shadow: none;
+}
 
 /* ==========================================================================
    Content
@@ -102,6 +120,7 @@ body { }
 .alignleft { float: left; }
 .alignright { float: right; }
 figure.alignnone { margin-left: 0; margin-right: 0; }
+
 
 
 
