@@ -53,8 +53,8 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_54c48e0cbed30',
-				'label' => 'Price from:',
-				'name' => 'oneday_price_from',
+				'label' => 'Price:',
+				'name' => 'oneday_price',
 				'type' => 'text',
 				'default_value' => '',
 				'placeholder' => '',
@@ -64,35 +64,14 @@ if(function_exists("register_field_group"))
 				'maxlength' => '',
 			),
 			array (
-				'key' => 'field_54c48ed6bed32',
-				'label' => 'Includes:',
-				'name' => 'includes',
+				'key' => 'field_54c48ed6bed31',
+				'label' => 'Description:',
+				'name' => 'description',
 				'type' => 'wysiwyg',
 				'default_value' => '',
 				'toolbar' => 'full',
-				'media_upload' => 'yes',
-			),
-			array (
-				'key' => 'field_54c48e90bed31',
-				'label' => 'Destination:',
-				'name' => 'destination',
-				'type' => 'relationship',
-				'return_format' => 'object',
-				'post_type' => array (
-					0 => 'destination',
-				),
-				'taxonomy' => array (
-					0 => 'all',
-				),
-				'filters' => array (
-					0 => 'search',
-				),
-				'result_elements' => array (
-					0 => 'post_type',
-					1 => 'post_title',
-				),
-				'max' => '',
-			),
+				'media_upload' => 'no',
+			)
 		),
 		'location' => array (
 			array (
