@@ -1,0 +1,51 @@
+/*============================== Carousel =============================*/
+.carousel {
+
+    .carousel-inner{ position: relative; }
+
+    .carousel-content{
+        top: 41%;
+        left: 0;
+        bottom: 0;
+        color: #fff;
+        width: 100%;
+        position: absolute;
+        
+        h1{
+            font-size: 50px;
+            font-family: Gotham-Bold;
+        }
+        p span{ 
+            padding: 5px 16px;
+            border-radius: 25px;
+            border: 1px solid #fff; 
+        }
+    }
+
+    .carousel-control {
+        &.right { 
+            background-image: none; 
+            span{
+                right: 30px;
+                font-size: 80px;
+            }
+        }
+
+        &.left { 
+            background-image: none; 
+            span{
+                left: 30px;
+                font-size: 80px;
+            }
+        }
+
+        span {
+            top: 40%;
+            z-index: 5;
+            font-size: 50px;
+            position: absolute;
+            font-family: initial;
+            display: inline-block;
+        }
+    }
+}
