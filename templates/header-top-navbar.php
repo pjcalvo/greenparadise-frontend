@@ -1,9 +1,9 @@
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
     <div class="container">
-        <div class="logo col-sm-2 col-sm-offset-1">
+        <div class="logo col-sm-1 col-sm-offset-2">
                 <a href="/"><img src="<?php echo get_theme_mod('custom_logo') ?>" ?></a>
         </div>
-        <div class="nav-container col-sm-9">
+        <div class="nav-container col-sm-8">
             <nav class="collapse navbar-collapse" role="navigation">
                 <ul class="nav nav-pills">
                     <li role="presentation" class="active"><a href="#"> <span class="icon-leaf"></span> HOME</a></li>

@@ -4,6 +4,7 @@
 
 @import "bootstrap/bootstrap.less";
 @import "icons.less";
+@import "home.less";
 
 @import "../css/plugins/icons/icons.css";
 
@@ -34,34 +35,47 @@ body { }
 
 .banner {
     padding-top: 10px;
+    margin-bottom: 0px;
     padding-bottom: 10px;
     background-color: #fff;
-    .nav-container{
-        padding-top: 25px;
-    }
+    border-color: transparent;
 }
 
-.nav-pills>li>a{
-    color: #000;
-    font-weight: 700;
-    text-align: center;
-    font-size: 15pt;
-    font-family: Gotham-Book;
-    line-height: 26.827px;
-    span{
-            display: block;
-        }
-}
+.nav-pills{ padding-left: 45px; }
 
 .nav-pills>li.active>a{
     color: #89c74d;
-    font-size: 16pt;
+    font-size: 14px;
     font-family: Gotham-Bold;
     background-color: transparent;
 }
 
+.nav-pills>li>a{
+    color: #000;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    font-family: Gotham-Book;
+    line-height: 26.827px;
+    padding: 5px 20px 0px 15px;
+    span{ 
+        display: block;
+        font-size: 25px;
+    }
+}
+
+.nav-pills>li{ padding-top: 17px; }
+
+.nav-pills>li+li{
+    margin-left: 20px;
+}
+
 .logo a{
     box-shadow: none;
+    img{
+        width: 100px;
+        padding-top: 16px;
+    }
 }
 
 /* ==========================================================================
@@ -109,6 +123,14 @@ body { }
 
 .content-info { }
 
+/* ==========================================================================
+Custome
+========================================================================== */
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
 
 
 /* ==========================================================================

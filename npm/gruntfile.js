@@ -6,6 +6,7 @@ module.exports = function (grunt) {
 		"../assets/vendor/bootstrap/js/bootstrap.min.js",
 		"../assets/vendor/bootstrap/components/affix.js",
 		"../assets/vendor/bootstrap/components/tab.js",
+        "../assets/vendor/bootstrap/components/carousel.js",
 		"../assets/js/plugins/icons/icons.js"
 	];
 
