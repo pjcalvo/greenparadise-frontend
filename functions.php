@@ -24,6 +24,9 @@ require_once locate_template('/post-types/vacation_package.php');// Vacation Pac
 require_once locate_template('/post-types/hotel.php');// Hotel
 require_once locate_template('/post-types/destination.php');// Destinations
 
+/*Post 2 Posts relations */
+require_once locate_template('/post-types/relations/post2post.php');          // Custom functions
+
 /* Add Logo Field*/
 add_action( 'customize_register', 'themename_customize_register' );
 function themename_customize_register($wp_customize) {
