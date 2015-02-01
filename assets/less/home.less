@@ -1,39 +1,30 @@
 /*============================== Carousel =============================*/
 .carousel {
+    .carousel-inner { position: relative; }
 
-    .carousel-inner{ position: relative; }
-
-    .carousel-content{
+    .carousel-content {
         top: 41%;
         left: 0;
         bottom: 0;
-        color: #fff;
         width: 100%;
         position: absolute;
-        
-        h1{
-            font-size: 50px;
-            font-family: Gotham-Bold;
-        }
-        p span{ 
-            padding: 5px 16px;
-            border-radius: 25px;
-            border: 1px solid #fff; 
-        }
+        color: @color-white;
     }
 
     .carousel-control {
-        &.right { 
-            background-image: none; 
-            span{
+        &.right {
+            background-image: none;
+
+            span {
                 right: 30px;
                 font-size: 80px;
             }
         }
 
-        &.left { 
-            background-image: none; 
-            span{
+        &.left {
+            background-image: none;
+
+            span {
                 left: 30px;
                 font-size: 80px;
             }
@@ -48,4 +39,36 @@
             display: inline-block;
         }
     }
+}
+
+/*============================== Explore Section =============================*/
+.exploreSection {
+    height: 300px;
+    padding-top: 70px;
+}
+
+
+/*============================== About Section =============================*/
+.aboutSection {
+    height: 420px;
+    padding-top: 80px;
+    
+    .subtitle{
+        margin-top: 10px;
+    }
+    
+    .resume{
+        font-size: 12px;
+        padding: 6px 20%;
+        line-height: 30px;
+        font-family: Gotham-Light;
+    }
+}
+
+.frog {
+    background-image: url('/wp-content/themes/greenparadise/assets/img/frog-background.png');
+    background-size: 100%;
+    background-size: 100% 70%;
+    background-position-y: 125%;
+    background-repeat: no-repeat;
 }

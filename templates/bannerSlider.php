@@ -12,8 +12,8 @@
   </div>
   <div class="carousel-content">
       <p class="center">ENJOY THE PARADISE</p>
-      <h1 class="center">WELCOME TO COSTA RICA</h1>
-      <p><span class="center">GET STARTED</span></p>
+      <h1 class="title t1 center">WELCOME TO COSTA RICA</h1>
+      <p><button class="center round primary">GET STARTED</button></p>
   </div>
  
   <!-- Controls -->

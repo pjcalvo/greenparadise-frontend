@@ -1,188 +1,259 @@
 /*!
  * Roots 6.5.1
  */
-
 @import "bootstrap/bootstrap.less";
 @import "icons.less";
 @import "home.less";
-
 @import "../css/plugins/icons/icons.css";
 
 /* ==========================================================================
-   Fonts
-   ========================================================================== */
-
+ Fonts
+ ========================================================================== */
 @font-face {
-	font-family: 'Gotham-Bold';
-	src:url('../fonts/Gotham/Gotham-Bold.otf');
+    font-family: 'Gotham-Bold';
+    src: url('../fonts/Gotham/Gotham-Bold.otf');
 }
 
 @font-face {
-	font-family: 'Gotham-Book';
-	src:url('../fonts/Gotham/Gotham-Book.otf');
+    font-family: 'Gotham-Book';
+    src: url('../fonts/Gotham/Gotham-Book.otf');
 }
 
 @font-face {
-	font-family: 'Gotham-Light';
-	src:url('../fonts/Gotham/Gotham-Light.otf');
+    font-family: 'Gotham-Light';
+    src: url('../fonts/Gotham/Gotham-Light.otf');
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('../fonts/Gotham/Gotham-Medium.otf');
 }
 
 /* ==========================================================================
-   Colors
-   ========================================================================== */
-
-@color-blue : #0057a6;
+ Colors
+ ========================================================================== */
+@color-white: #fff;
+@color-black: #000;
+@color-blue: #0057a6;
 @color-lightgray: #b4aea9;
-@color-white: white;
+@color-green-mantis: #89c74d;
 
-
-/* ==========================================================================
-   Base
-   ========================================================================== */
-
-body {
-    font-family: 'Gotham';
+.white{
+    color: @color-white;
 }
 
+.green{
+    color: @color-green-mantis;
+}
 /* ==========================================================================
-   Header
-   ========================================================================== */
+ Base
+ ========================================================================== */
+body { font-family: 'Gotham'; }
 
+/* ==========================================================================
+ Header
+ ========================================================================== */
 .banner {
     padding-top: 10px;
     margin-bottom: 0px;
     padding-bottom: 10px;
-    background-color: #fff;
     border-color: transparent;
+    background-color: @color-white;
 }
 
-.nav-pills{ padding-left: 45px; }
+.nav-pills { padding-left: 45px; }
 
-.nav-pills>li.active>a{
-    color: #89c74d;
+.nav-pills>li.active>a {
     font-size: 14px;
     font-family: Gotham-Bold;
+    color: @color-green-mantis;
     background-color: transparent;
 }
 
-.nav-pills>li>a{
-    color: #000;
+.nav-pills>li>a {
     font-size: 13px;
     font-weight: 700;
     text-align: center;
-    font-family: Gotham-Book;
+    color: @color-black;
     line-height: 26.827px;
+    font-family: Gotham-Book;
     padding: 5px 20px 0px 15px;
-    span{ 
+
+    span {
         display: block;
         font-size: 25px;
     }
 }
 
-.nav-pills>li{ padding-top: 17px; }
+.nav-pills>li { padding-top: 17px; }
 
-.nav-pills>li+li{
-    margin-left: 20px;
-}
+.nav-pills>li+li { margin-left: 20px; }
 
-.logo a{
+.logo a {
     box-shadow: none;
-    img{
+
+    img {
         width: 100px;
         padding-top: 16px;
     }
 }
 
 /* ==========================================================================
-   Content
-   ========================================================================== */
-
-.content { }
-
-
+ Content
+ ========================================================================== */
+.content {
+    /*code*/
+}
 
 /* ==========================================================================
-   Primary Content
-   ========================================================================== */
-
-.main { }
+ Primary Content
+ ========================================================================== */
+.main {
+    /*code*/
+}
 
 /* Gallery Shortcode */
 .gallery-row { padding: 15px 0; }
 
-
+/* ==========================================================================
+ Sidebar
+ ========================================================================== */
+.sidebar {
+    /*code*/
+}
 
 /* ==========================================================================
-   Sidebar
-   ========================================================================== */
+ Buttons
+ ========================================================================== */
 
-.sidebar { }
-
-
+button.round {
+    color: @color-white;
+    border-radius: 25px;
+    font-family: Gotham-Bold;
+    
+    &.primary{
+        font-size: 12px;
+        padding: 5px 30px;
+        background-color: transparent;
+        border: 1px solid @color-white;
+    }
+    
+    &.btn-green{
+        font-size: 20px;
+        padding: 10px 30px;
+        background-color: @color-green-mantis;
+        border: 1px solid @color-green-mantis;
+    }
+}
 
 /* ==========================================================================
-   Posts
-   ========================================================================== */
+ Titles
+ ========================================================================== */
+h1.title {
+    font-family: Gotham-Bold;
+    
+    span {
+        font-family: Gotham-Light;
+    }
+    
+    &.t1{
+        font-size: 50px;
+    }
+    
+    &.t2{
+        font-size: 30px;
+    }
+    
+    &.t3{
+        font-size: 32px;
+    }
+    
+    &.t4{
+        font-size: 32px;
+    }
+}
 
-.hentry header { }
-.hentry time { }
-.hentry .byline { }
-.hentry .entry-content { }
-.hentry footer { }
-
-
+h2.subtitle{
+    font-size: 26px;
+    font-family: Gotham-Light;
+}
 
 /* ==========================================================================
-   Footer
-   ========================================================================== */
+ Text
+ ========================================================================== */
+p.text{
+    &.t-sumary{
+        font-size: 20px;
+        font-family: Gotham-Medium;
+    }
+}
 
+/* ==========================================================================
+ Posts
+ ========================================================================== */
+.hentry header {
+    /*code*/
+}
 
-#logo-bar{
+.hentry time {
+    /*code*/
+}
+
+.hentry .byline {
+    /*code*/
+}
+
+.hentry .entry-content {
+    /*code*/
+}
+
+.hentry footer {
+    /*code*/
+}
+
+/* ==========================================================================
+ Footer
+ ========================================================================== */
+#logo-bar {
     height: 84px;
     background-color: @color-blue;
-    box-shadow:  0px 8px 11px @color-lightgray;
+    box-shadow: 0px 8px 11px @color-lightgray;
     text-align: center;
     padding-top: 20px;
     color: @color-white;
     font-size: 20px;
     font-weight: lighter;
     letter-spacing: 2px;
-    
-    p{
-        padding-top: 5px;
-    }
-    
+
+    p { padding-top: 5px; }
 }
 
-#footer-bar{
+#footer-bar {
     height: 240px;
     padding-top: 60px;
 }
 
-.footer-column{
+.footer-column {
     padding-left: 30px;
     font-size: 14px;
-    
-    h4{
-        font-weight: bold;  
-    }
-    
-    p{
+
+    h4 { font-weight: bold; }
+
+    p {
         font-weight: lighter;
         color: @color-lightgray;
         max-width: 100px;
     }
-    
 }
 
-#footer-text{
+#footer-text {
     width: 80%;
-    
-    .footer-logo{
+
+    .footer-logo {
         border-right: 1px solid @color-lightgray;
         padding-bottom: 5px;
-        
-        img{
+
+        img {
             width: 150px;
             height: auto;
         }
@@ -190,72 +261,69 @@ body {
 }
 
 .social-list {
-    
     padding-left: 0px;
-    
-    .social-icon{
+
+    .social-icon {
         width: 42px;
         height: 40px;
         background-image: url(../img/icon-social.png);
         display: inline-block;
         margin-right: 13px;
-        
-        &:hover{
-            cursor: pointer;
-        }
-    
+
+        &:hover { cursor: pointer; }
     }
 
-    .twitter{
-        background-position: 114px;
+    .twitter { background-position: 114px; }
 
-    }
-    
-    .gmail {
-        background-position: 42px;
-    }
-
+    .gmail { background-position: 42px; }
 }
 
-
-
 /* ==========================================================================
-Custome
-========================================================================== */
-.center{
+ Custome
+ ========================================================================== */
+.center {
     margin-left: auto;
     margin-right: auto;
     display: table;
 }
 
-.float-right{
-    float: right;
-}
+.float-right { float: right; }
 
-.float-left{
-    float: left;
-}
-
+.float-left { float: left; }
 
 /* ==========================================================================
-   WordPress Generated Classes
-   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
-   ========================================================================== */
+ WordPress Generated Classes
+ See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+ ========================================================================== */
+.aligncenter {
+    display: block;
+    margin: 0 auto;
+}
 
-.aligncenter { display: block; margin: 0 auto; }
+.text-center{
+    align-content: center;
+}
+
 .alignleft { float: left; }
+
 .alignright { float: right; }
-figure.alignnone { margin-left: 0; margin-right: 0; }
 
-
-
+figure.alignnone {
+    margin-left: 0;
+    margin-right: 0;
+}
 
 /* ==========================================================================
-   Media Queries
-   ========================================================================== */
+ Media Queries
+ ========================================================================== */
+@media (min-width: @screen-sm-min) {
+    /*code*/
+}
 
-@media (min-width: @screen-sm-min) { }
+@media (min-width: @screen-md-min) {
+    /*code*/
+}
 
-@media (min-width: @screen-md-min) { }
-
-@media (min-width: @screen-lg-min) { }
+@media (min-width: @screen-lg-min) {
+    /*code*/
+}
