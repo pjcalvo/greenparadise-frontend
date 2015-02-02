@@ -1,5 +1,5 @@
 <!-- Wrapper for slides -->
-<div id="carousel-banner" class="carousel slide" data-ride="carousel">
+<div id="carousel-banner" class="carousel slide bannerSlider" data-ride="carousel">
  
   <!-- Wrapper for slides -->
   <div class="carousel-inner">

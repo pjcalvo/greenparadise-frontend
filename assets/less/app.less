@@ -28,7 +28,6 @@
     font-family: 'Gotham-Medium';
     src: url('../fonts/Gotham/Gotham-Medium.otf');
 }
-
 /* ==========================================================================
  Colors
  ========================================================================== */
@@ -37,14 +36,17 @@
 @color-blue: #0057a6;
 @color-lightgray: #b4aea9;
 @color-green-mantis: #89c74d;
+@color-dark-green: #4ea223;
+@color-blue-cerulean: #00b7fa;
 
-.white{
-    color: @color-white;
-}
+.black { color: @color-black; }
 
-.green{
-    color: @color-green-mantis;
-}
+.white { color: @color-white; }
+
+.green { color: @color-green-mantis; }
+
+.dark-green { color: @color-dark-green; }
+
 /* ==========================================================================
  Base
  ========================================================================== */
@@ -125,20 +127,19 @@ body { font-family: 'Gotham'; }
 /* ==========================================================================
  Buttons
  ========================================================================== */
-
 button.round {
     color: @color-white;
     border-radius: 25px;
     font-family: Gotham-Bold;
-    
-    &.primary{
+
+    &.primary {
         font-size: 12px;
         padding: 5px 30px;
         background-color: transparent;
         border: 1px solid @color-white;
     }
-    
-    &.btn-green{
+
+    &.btn-green {
         font-size: 20px;
         padding: 10px 30px;
         background-color: @color-green-mantis;
@@ -151,29 +152,21 @@ button.round {
  ========================================================================== */
 h1.title {
     font-family: Gotham-Bold;
+
+    span { font-family: Gotham-Light; }
+
+    &.t1 { font-size: 50px; }
+
+    &.t2 { font-size: 30px; }
+
+    &.t3 { font-size: 32px; }
+
+    &.t4 { font-size: 32px; }
     
-    span {
-        font-family: Gotham-Light;
-    }
-    
-    &.t1{
-        font-size: 50px;
-    }
-    
-    &.t2{
-        font-size: 30px;
-    }
-    
-    &.t3{
-        font-size: 32px;
-    }
-    
-    &.t4{
-        font-size: 32px;
-    }
+    &.t5 { font-size: 12px; }
 }
 
-h2.subtitle{
+h2.subtitle {
     font-size: 26px;
     font-family: Gotham-Light;
 }
@@ -181,10 +174,14 @@ h2.subtitle{
 /* ==========================================================================
  Text
  ========================================================================== */
-p.text{
-    &.t-sumary{
+p.text {
+    &.t-sumary {
         font-size: 20px;
         font-family: Gotham-Medium;
+    }
+    &.img-sumary {
+        font-size: 12px;
+        font-family: Gotham-Book;
     }
 }
 
@@ -300,9 +297,7 @@ p.text{
     margin: 0 auto;
 }
 
-.text-center{
-    align-content: center;
-}
+.text-center { align-content: center; }
 
 .alignleft { float: left; }
 
