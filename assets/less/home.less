@@ -80,12 +80,13 @@
     
     .content{
         width: 80%;
-        margin-top: -30px;
+        margin-top: -25px;
         background-color: @color-white;
     }
     
-    .oneDayContent{
+    .oneDayContent, .vacationPackContent{
         display: flex;
+        padding: 0 20px;
         background: @color-white;
     }
     .resume {
@@ -100,30 +101,37 @@
         font-family: Gotham-Book;
     }
 
-    .carousel .carousel-control {
-        width: 0px;
-        
-        &.right {
-            background-image: none;
-
-            span { right: 0px; }
+    .carousel {
+        img.imgServCarousel{ width: 195px; }
+        .title.t5{
+            margin-bottom: 3px;
+            text-transform: uppercase;
         }
+        .carousel-control {
+            width: 0px;
 
-        &.left {
-            background-image: none;
+            &.right {
+                background-image: none;
 
-            span { left: 15px; }
-        }
+                span { right: 0px; }
+            }
 
-        span {
-            top: 20%;
-            z-index: 5;
-            font-size: 30px;
-            position: absolute;
-            font-family: initial;
-            padding: 10px 10px;
-            display: inline-block;
-            background-color: @color-blue-cerulean;
+            &.left {
+                background-image: none;
+
+                span { left: 15px; }
+            }
+
+            span {
+                top: 15%;
+                z-index: 5;
+                font-size: 30px;
+                position: absolute;
+                font-family: initial;
+                padding: 10px 10px;
+                display: inline-block;
+                background-color: @color-blue-cerulean;
+            }
         }
     }
 }
