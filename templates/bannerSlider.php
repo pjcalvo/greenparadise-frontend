@@ -4,10 +4,10 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="/wp-content/uploads/Images/Slider1.png">
+      <img src="/wordpress/wp-content/uploads/Images/Slider1.png">
     </div>
     <div class="item">
-      <img src="/wp-content/uploads/Images/Slider2.png">
+      <img src="/wordpress/wp-content/uploads/Images/Slider1.png">
     </div>
   </div>
   <div class="carousel-content">

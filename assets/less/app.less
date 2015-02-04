@@ -4,6 +4,9 @@
 @import "bootstrap/bootstrap.less";
 @import "icons.less";
 @import "home.less";
+@import "partials/destinations.less";
+@import "partials/moreservices.less";
+
 @import "../css/plugins/icons/icons.css";
 
 /* ==========================================================================
@@ -38,6 +41,8 @@
 @color-green-mantis: #89c74d;
 @color-dark-green: #4ea223;
 @color-blue-cerulean: #00b7fa;
+@color-blue-cerulean-light: #73d7fc;
+@color-orange: #fb6532;
 
 .black { color: @color-black; }
 
@@ -139,6 +144,12 @@ button.round {
         padding: 5px 30px;
         background-color: transparent;
         border: 1px solid @color-white;
+        
+        &.btn-orange{
+            background-color: @color-orange;
+            border: none;
+            font-family: Gotham-Light;
+        }
     }
 
     &.btn-green {
@@ -177,6 +188,9 @@ h2.subtitle {
  Text
  ========================================================================== */
 p.text {
+    
+    font-size: 16px;
+    
     &.t-sumary {
         font-size: 20px;
         font-family: Gotham-Medium;

@@ -89,3 +89,4 @@ $vacationLoop = new WP_Query( $vacationArgs );
             </div>
         </div>
     </div>
+</div>
