@@ -4,14 +4,14 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="/wordpress/wp-content/uploads/Images/Slider1.png">
+      <img src="/wp-content/themes/greenparadise/assets/img/Slider1.png">
     </div>
     <div class="item">
-      <img src="/wordpress/wp-content/uploads/Images/Slider1.png">
+      <img src=/wp-content/themes/greenparadise/assets/img/Slider2.png>
     </div>
   </div>
   <div class="carousel-content">
-      <p class="center">ENJOY THE PARADISE</p>
+      <p class="center text t-sumary">ENJOY THE PARADISE</p>
       <h1 class="title t1 center">WELCOME TO COSTA RICA</h1>
       <p><button class="center round primary">GET STARTED</button></p>
   </div>

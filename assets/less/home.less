@@ -1,9 +1,14 @@
 /*============================== Carousel =============================*/
 .bannerSlider.carousel {
     .carousel-inner { position: relative; }
-
+    .carousel-inner>.item>img{
+        width: 100%;
+        height: 685px;
+        display: block;
+        max-width: 100%;
+    }
     .carousel-content {
-        top: 41%;
+        top: 255px;
         left: 0;
         bottom: 0;
         width: 100%;
@@ -43,20 +48,20 @@
 
 /*============================== Explore Section =============================*/
 .exploreSection {
-    height: 300px;
-    padding-top: 70px;
+    height: 400px;
+    padding-top: 90px;
 }
 
 /*============================== About Section =============================*/
 .aboutSection {
-    height: 420px;
-    padding-top: 80px;
+    height: 425px;
+    padding-top: 30px;
 
     .subtitle { margin-top: 10px; }
 
     .resume {
         font-size: 12px;
-        padding: 6px 20%;
+        padding: 20px 21%;
         line-height: 30px;
         font-family: Gotham-Light;
     }
@@ -74,12 +79,12 @@
 .ourServicesSection {
     
     .ourServicesHeader{
-        padding-top: 40px;
+        padding-top: 50px;
         box-shadow: 0px 20px 30px 0px #ccc;
     }
     
     .content{
-        width: 80%;
+        width: 85%;
         margin-top: -25px;
         background-color: @color-white;
     }
@@ -102,7 +107,7 @@
     }
 
     .carousel {
-        img.imgServCarousel{ width: 195px; }
+        img.imgServCarousel{ width: 210px; }
         .title.t5{
             margin-bottom: 3px;
             text-transform: uppercase;

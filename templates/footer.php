@@ -1,8 +1,8 @@
-<footer class="content-info container" role="contentinfo">
+<footer class="content-info container col-sm-12" role="contentinfo">
   <div class="row">
     <div class="col-lg-12">
       <?php dynamic_sidebar('sidebar-footer'); ?>
-    <div id="logo-bar" class="container">
+    <div id="logo-bar" class="container col-sm-12">
         <div class="row">
             <div class="col-xs-6">
               <p class="float-right">Find us:</p>   
@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-    <div id="footer-bar" class="container">
+    <div id="footer-bar" class="container col-sm-12">
         <div class="row center" id ="footer-text">
             <div class="col-sm-3 footer-logo">
                 <div class= "footer-column">

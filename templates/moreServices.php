@@ -1,4 +1,4 @@
-<div class="container" role="">
+<div class="container col-sm-12" role="">
     <div id= "moreservices-banner"class="row">
         <div class="content center">
             <h1><strong>M O R E </strong> S E R V I C E S</h1>      
