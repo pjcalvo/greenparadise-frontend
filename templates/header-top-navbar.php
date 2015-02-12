@@ -7,7 +7,7 @@
             <nav class="collapse navbar-collapse" role="navigation">
                 <ul class="nav nav-pills">
                     <li role="presentation" class="active"><a href="#"> <span class="icon-leaf"></span> HOME</a></li>
-                    <li role="presentation"><a href="#"> <span class="icon-users"></span> ABOUT US</a></li>
+                    <li role="presentation"><a href="/about-us/"> <span class="icon-users"></span> ABOUT US</a></li>
                     <li role="presentation"><a href="#"> <span class="icon-work"></span> SERVICES</a></li>
                     <li role="presentation"><a href="#"> <span class="icon-location"></span> DESTINATION</a></li>
                     <li role="presentation"><a href="#"> <span class="icon-phone-in-talk"></span> CONTACTS</a></li>
