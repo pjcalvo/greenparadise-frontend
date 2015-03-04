@@ -5,6 +5,8 @@
 @import "icons.less";
 @import "home.less";
 @import "aboutUS.less";
+@import "destinations.less";
+
 @import "partials/destinations.less";
 @import "partials/moreservices.less";
 
@@ -43,6 +45,7 @@
 @color-lightgray: #b4aea9;
 @color-dark-green: #4ea223;
 @color-green-mantis: #89c74d;
+@color-green-conifer: #9bd548;
 @color-blue-cerulean: #00b7fa;
 @color-blue-cerulean-light: #73d7fc;
 
@@ -133,6 +136,12 @@ body { font-family: 'Gotham'; }
     display: table;
 }
 
+.content-large {
+    width: 80%;
+    margin: 0 auto;
+    display: table;
+}
+
 /* ==========================================================================
  Primary Content
  ========================================================================== */
@@ -179,6 +188,14 @@ button.round {
     }
 }
 
+.btn-green{
+    padding: 10px;
+    font-size: 13px;
+    color: @color-white;
+    font-family: Gotham-Bold;
+    background-color: @color-green-conifer; 
+}
+
 /* ==========================================================================
  Titles
  ========================================================================== */
@@ -196,6 +213,10 @@ h1.title {
     &.t4 { font-size: 32px; }
     
     &.t5 { font-size: 16px; }
+    
+    &.t6 { font-size: 14px; }
+    
+    &.t7 { font-size: 12px; }
 }
 
 h2.subtitle {
@@ -222,6 +243,16 @@ p.text {
         font-size: 12px;
         font-family: Gotham-Book;
     }
+    &.main-text{
+        .t-paragraph;
+        color: @color-pine-cone;
+        line-height: 34px;
+    }
+}
+
+.t12{
+        font-size: 12px;
+        font-family: Gotham-Book;
 }
 
 /* ==========================================================================
