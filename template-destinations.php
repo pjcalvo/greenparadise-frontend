@@ -2,6 +2,20 @@
 /*
 Template Name: Destinations Template
 */
+
+$args = array( 'post_type' => 'destination', 'posts_per_page' => -1);
+$loop = new WP_Query( $args );
+
+$taxonomyArgs = array(
+		'hide_empty'        => true,
+		'parent'			=> 0,
+        'hierarchical'      => false
+    );
+
+/* Taxonomy */
+$taxonomy = 'destination_category'; // this is the name of the taxonomy
+$terms = get_terms( $taxonomy, $taxonomyArgs ); // for more details refer to codex please.
+
 if( have_posts() ){the_post();}
 ?>
 <div class="destinations">
@@ -17,10 +31,11 @@ if( have_posts() ){the_post();}
         <div class="header-select">
             <div class="center">
                 <label class="lbl_selectpicker">SELECT DESTINATION</label>
-                <select class="selectpicker green">
-                    <option>North America</option>
-                    <option>South America</option>
-                    <option>Europe</option>
+                <select id="destinationFilter" class="selectpicker green">
+                    <option value="-1">View All Destinations</option>
+                    <?php foreach ($terms as $term) : ?>
+                    <option value="<?php echo $term->term_id; ?>"><?php echo $term->name; ?></option>
+                    <?php endforeach; ?>
                 </select>
             </div>
         </div>
@@ -29,56 +44,43 @@ if( have_posts() ){the_post();}
             <div id="dest_carousel" class="carousel slide" data-ride="carousel">
 
                 <!-- Wrapper for slides -->
+                
                 <div class="carousel-inner" role="listbox">
+                    <?php $count = 0 ?>
                     <div class="item active">
+                        
+                    <?php while ( $loop->have_posts() ) : $loop->the_post(); 
+                        $count++; 
+                        if($count >= 4):
+                        $count = 0;
+                        ?>
+                        </div><div class="item">
+                        <?php endif;?>
                         <div class="col-sm-4">
-                            <img src="\wp-content\uploads\Images\Layer3.png">
-                            <div class="blue-cerulean">
-                                <span class="price center">$689<sup>PER PERSON</sup></span>
-                                <span class="place center">Disney World, Orlando</span>
+                                <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
+                                <div class="blue-cerulean">
+                                    <span class="price center">$<?php echo get_field('destination_price') ?><sup>PER PERSON</sup></span>
+                                    <span class="place center"><?php the_title() ?></span>
+                                </div>
+                                <p class="text-center"><?php echo get_field('destination_description') ?></p>
+                                <hr>
+                                <div class="sect-foot">
+                                    <label class="blue-cerulean t12">RESTRICTIONS APPLY</label>
+                                    <a href="<?php echo get_permalink() ?>">
+                                        <button href type="button" class="btn btn-green">TAKE ME THERE</button>
+                                    </a>
+                                </div>
                             </div>
-                            <p class="text-center">4 day/3 night air + hotel non stopfrom San Jose to Destination</p>
-                            <hr>
-                            <div class="sect-foot">
-                                <label class="blue-cerulean t12">RESTRICTIONS APPLY</label>
-                                <button type="button" class="btn btn-green">TAKE ME THERE</button>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <img src="\wp-content\uploads\Images\Layer1.png">
-                            <div class="blue-cerulean">
-                                <span class="price center">$689<sup>PER PERSON</sup></span>
-                                <span class="place center">Disney World, Orlando</span>
-                            </div>
-                            <p class="text-center">4 day/3 night air + hotel non stopfrom San Jose to Destination</p>
-                            <hr>
-                            <div class="sect-foot">
-                                <label class="blue-cerulean t12">RESTRICTIONS APPLY</label>
-                                <button type="button" class="btn btn-green">TAKE ME THERE</button>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <img src="\wp-content\uploads\Images\Layer2.png">
-                            <div class="blue-cerulean">
-                                <span class="price center">$689<sup>PER PERSON</sup></span>
-                                <span class="place center">Disney World, Orlando</span>
-                            </div>
-                            <p class="text-center">4 day/3 night air + hotel non stopfrom San Jose to Destination</p>
-                            <hr>
-                            <div class="sect-foot">
-                                <label class="blue-cerulean t12">RESTRICTIONS APPLY</label>
-                                <button type="button" class="btn btn-green">TAKE ME THERE</button>
-                            </div>
+                    
+                        <?php endwhile; // end of the loop. 
+                        ?>
                         </div>
                     </div>
-                </div>
+                    <!-- Left and right controls -->                
+                    <a class="left carousel-control" href="#dest_carousel" role="button" data-slide="prev"><span>‹</span></a>
 
-                <!-- Left and right controls -->                
-                <a class="left carousel-control" href="#dest_carousel" role="button" data-slide="prev"><span>‹</span></a>
-                
-                <a class="right carousel-control" href="#carousel-oneDay" role="button" data-slide="next"><span>›</span></a>
+                    <a class="right carousel-control" href="#dest_carousel" role="button" data-slide="next"><span>›</span></a>
+                </div>
             </div>
         </div>
     </div>

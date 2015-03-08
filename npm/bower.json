@@ -1,14 +1,21 @@
 {
-  "name": "GreenParadise",
-  "version": "1.0.0",
-  "dependencies": {
-    "bootstrap": "~3.3.1"
-  },
-  "exportsOverride": {
-    "bootstrap": {
-      "js": "dist/js/bootstrap.min.js",
-	  "components": "js",
-      "less": "less"
+    "name": "GreenParadise",
+    "version": "1.0.0",
+    "dependencies": {
+        "bootstrap": "~3.3.1",
+        "bootstrap-select" : "1.6.4"
+    },
+    "exportsOverride": {
+        "bootstrap": {
+            "js": "dist/js/bootstrap.min.js",
+            "components": "js",
+            "less": "less",
+            "fonts": "fonts"
+        },
+        
+        "bootstrap-select": {
+            "js": "dist/js",
+            "less": "less"
+        }
     }
-  }
 }

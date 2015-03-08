@@ -4,10 +4,11 @@ module.exports = function (grunt) {
 	var libsJS = [
 		"../assets/vendor/jquery/jquery.js",
 		"../assets/vendor/bootstrap/js/bootstrap.min.js",
+        "../assets/vendor/bootstrap-select/js/bootstrap-select.min.js",
 		"../assets/vendor/bootstrap/components/affix.js",
 		"../assets/vendor/bootstrap/components/tab.js",
         "../assets/vendor/bootstrap/components/carousel.js",
-		"../assets/js/plugins/icons/icons.js"
+		//"../assets/js/plugins/icons/icons.js"
 	];
 
 	var projectJS = [
@@ -19,7 +20,7 @@ module.exports = function (grunt) {
 		less: {
 			dev: {
 				options: {
-					sourceMap: true,
+					sourceMap: false,
 					sourceMapBasepath: "../assets/less/",
 					sourceMapRootpath: "/",
 					compress: true,
@@ -35,7 +36,7 @@ module.exports = function (grunt) {
 		concat: {
 			dev: {
 				options: {
-					sourceMap: true
+					sourceMap: false
 				},
 				files: [{
 					src: projectJS,
@@ -46,7 +47,7 @@ module.exports = function (grunt) {
 		uglify: {
 			release: {
 				options: {
-					sourceMap: true
+					sourceMap: false
 				},
 				files: [{
 					src: ['../assets/dist/scripts.js'],
@@ -58,7 +59,13 @@ module.exports = function (grunt) {
 			js: {
 				src: ['../.tmp/scripts.js'],
 				dest: '../assets/dist/scripts.js'
-			}
+			},
+            font:{
+                expand: true,
+                flatten: true,
+                src: ['../assets/vendor/bootstrap/fonts/*'],
+				dest: '../assets/fonts/'
+            }
 		},
 		watch: {
 			files: ["../assets/less/**/*.less", '../assets/js/**/*.js'],
@@ -80,7 +87,7 @@ module.exports = function (grunt) {
 });
 	require('load-grunt-tasks')(grunt);
 	grunt.registerTask('default', ['dev']);
-	grunt.registerTask('dev', ['clean','less','concat:dev']);
+	grunt.registerTask('dev', ['clean','less','concat:dev', 'copy:font']);
 	//grunt.registerTask('release-qa', ['clean', 'bower:install', 'less', 'concat:dev', 'uglify:release', 'copy:js', 'ftp-deploy:qa']);
 	//grunt.registerTask('release-production', ['clean', 'bower:install', 'less', 'concat:dev', 'uglify:release', 'copy:js', 'msbuild:production', 'ftp-deploy:production']);
 };

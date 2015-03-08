@@ -32,7 +32,7 @@ $vacationLoop = new WP_Query( $vacationArgs );
                         $count = 0;
                         ?>
                         </div><div class="item">
-                        <?php endif;?>    
+                        <?php endif;?>
                         <div class="col-sm-4">
                             <a href="<?php echo get_permalink() ?>">
                                 <img class="imgServCarousel" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
