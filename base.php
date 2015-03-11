@@ -17,9 +17,9 @@
     }
   ?>
 
-  <div class="wrap main-container" role="document">
+  <div class="wrap container" role="document">
     <div class="content">
-      <main class="main col-sm-12" role="main">
+      <main class="main" role="main">
         <?php include roots_template_path(); ?>
       </main><!-- /.main -->
     </div><!-- /.content -->
