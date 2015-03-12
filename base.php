@@ -17,7 +17,7 @@
     }
   ?>
 
-  <div class="wrap container" role="document">
+  <div class="wrap" role="document">
     <div class="content">
       <main class="main" role="main">
         <?php include roots_template_path(); ?>
