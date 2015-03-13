@@ -3,7 +3,7 @@ $args = array( 'post_type' => 'ourTeam', 'posts_per_page' => -1);
 $loop = new WP_Query( $args );
 ?>
 <div class="content ourTeam">
-    <div class="ourTeam-content white">
+    <div class="ourTeam-content content-medium white">
         <h1 class="title t2 white text-center">OUR <span class="white"> TEAM</span></h1>
         <p class="text t-paragraph">Aliquam congue fermentum nisl. Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi, aliquet sit amet, euismod in, auctor. Sereque sed dolor. Aliquam.</p>
         <div class="team-content col-sm-12">

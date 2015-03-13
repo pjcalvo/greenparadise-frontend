@@ -8,7 +8,7 @@ $vacationLoop = new WP_Query( $vacationArgs );
 ?>
 
 <div class="container ourServicesSection">
-    <div class="content center">
+    <div class="content content-medium center">
         <div class="center ourServicesHeader">
             <h1 class="title t2 dark-green center">OUR <span class="black">SERVICES</span></h1>
             <p class="resume text-center">This is a short block of text describing the stats above. It provides additional info which helps explain. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis lacus eu felis finibus, sed accumsan dui sollicitudin</p>
