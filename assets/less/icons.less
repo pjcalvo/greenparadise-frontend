@@ -23,7 +23,21 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-location:before {
+[class^="-icon"], [class*="-icon"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.menu-destinations-icon:before {
 	content: "\e603";
 }
 
@@ -31,14 +45,14 @@
 	content: "\e604";
 }
 
-.icon-work:before {
+.menu-services-icon:before {
 	content: "\e602";
 }
 
-.icon-users:before {
+.menu-about-us-icon:before {
 	content: "\e600";
 }
 
-.icon-leaf:before {
+.menu-home-icon:before {
 	content: "\e601";
 }

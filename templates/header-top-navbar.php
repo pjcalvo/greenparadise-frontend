@@ -5,13 +5,20 @@
         </div>
         <div class="nav-container col-sm-8">
             <nav class="collapse navbar-collapse" role="navigation">
-                <ul class="nav nav-pills">
+                <?php
+                  if (has_nav_menu('primary_navigation')) :
+                    wp_nav_menu(array('theme_location' => 'primary_navigation', 
+                                      'menu_class' => 'nav nav-pills'));
+                  endif;
+                ?>
+                
+                <!--<ul class="nav nav-pills">
                     <li role="presentation" class="active"><a href="#"> <span class="icon-leaf"></span> HOME</a></li>
                     <li role="presentation"><a href="/about-us/"> <span class="icon-users"></span> ABOUT US</a></li>
                     <li role="presentation"><a href="#"> <span class="icon-work"></span> SERVICES</a></li>
                     <li role="presentation"><a href="#"> <span class="icon-location"></span> DESTINATION</a></li>
                     <li role="presentation"><a href="#"> <span class="icon-phone-in-talk"></span> CONTACTS</a></li>
-                </ul>
+                </ul>-->
             </nav>
         </div>
     </div>

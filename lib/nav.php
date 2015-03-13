@@ -62,7 +62,7 @@ function roots_nav_menu_css_class($classes, $item) {
 
   $classes = array_unique($classes);
 
-  return array_filter($classes, 'is_element_empty');
+  return $classes;
 }
 add_filter('nav_menu_css_class', 'roots_nav_menu_css_class', 10, 2);
 add_filter('nav_menu_item_id', '__return_null');
