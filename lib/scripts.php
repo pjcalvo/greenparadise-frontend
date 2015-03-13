@@ -32,6 +32,7 @@ function roots_scripts() {
     
   wp_enqueue_script('jquery');
   wp_enqueue_script('roots_scripts');
+  wp_localize_script( 'roots_scripts', 'AjaxUtil', array( 'url' => admin_url( 'admin-ajax.php' ), 'nonce' => wp_create_nonce( 'myajax-post-comment-nonce' ) ) );
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
 

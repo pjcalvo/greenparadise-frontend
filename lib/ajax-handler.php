@@ -27,7 +27,7 @@ function ajax_get_featured_destinations() {
     if($categoryId != -1){
         $args["tax_query"] = array(
             array(
-                'taxonomy' => 'desination-category',
+                'taxonomy' => 'destination_category',
                 'field' => 'id',
                 'terms' => array($categoryId)
             )
@@ -43,13 +43,15 @@ function ajax_get_featured_destinations() {
             $title = get_the_title();
             $price = get_field('destination_price');
             $description = get_field('destination_description');
-            $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ) );
-
+            $thumbnail = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
+            $link = get_permalink();
+            
             $item = array(
                 'title' => $title,
-                'price' => $mediaType,
-                'description' => $htmlMedia,
+                'price' => $price,
+                'description' => $description,
                 'thumbnail' => $thumbnail,
+                'link' => $link,
             );
 
             array_push($result, $item);
@@ -57,7 +59,7 @@ function ajax_get_featured_destinations() {
 
         wp_reset_postdata();
     }
-
+    
     echo json_encode($result);
     exit;
 }

@@ -33,19 +33,21 @@ if( have_posts() ){the_post();}
                 <label class="lbl_selectpicker">SELECT DESTINATION</label>
                 <select id="destinationFilter" class="selectpicker green">
                     <option value="-1">View All Destinations</option>
+                    
                     <?php foreach ($terms as $term) : ?>
+                    
                     <option value="<?php echo $term->term_id; ?>"><?php echo $term->name; ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
         </div>
-        <div class="title-content text-center"><h1 class="title t4">NORTH <span> AMERICA</span> </h1></div>
+        <div id="des-title" class="title-content text-center"><h1 class="title t4">ALL <span> DESTINATIONS</span> </h1></div>
         <div class="carousel-content">
             <div id="dest_carousel" class="carousel slide" data-ride="carousel">
 
                 <!-- Wrapper for slides -->
                 
-                <div class="carousel-inner" role="listbox">
+                <div id="destCarouselContainer" class="carousel-inner" role="listbox">
                     <?php $count = 0 ?>
                     <div class="item active">
                         

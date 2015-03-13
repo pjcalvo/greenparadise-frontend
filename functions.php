@@ -17,6 +17,7 @@ require_once locate_template('/lib/relative-urls.php');   // Root relative URLs
 require_once locate_template('/lib/widgets.php');         // Sidebars and widgets
 require_once locate_template('/lib/scripts.php');         // Scripts and stylesheets
 require_once locate_template('/lib/custom.php');          // Custom functions
+require_once locate_template('/lib/ajax-handler.php');    // Ajax Handler
 
 /*Post Types*/
 require_once locate_template('/post-types/one_day.php');// One Day Tour

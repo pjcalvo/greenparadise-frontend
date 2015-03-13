@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 		less: {
 			dev: {
 				options: {
-					sourceMap: false,
+					sourceMap: true,
 					sourceMapBasepath: "../assets/less/",
 					sourceMapRootpath: "/",
 					compress: true,
@@ -36,7 +36,7 @@ module.exports = function (grunt) {
 		concat: {
 			dev: {
 				options: {
-					sourceMap: false
+					sourceMap: true
 				},
 				files: [{
 					src: projectJS,
