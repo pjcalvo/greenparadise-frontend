@@ -10,8 +10,8 @@ $vacationLoop = new WP_Query( $vacationArgs );
 <div class="container ourServicesSection">
     <div class="content content-medium center">
         <div class="center ourServicesHeader">
-            <h1 class="title t2 dark-green center">OUR <span class="black">SERVICES</span></h1>
-            <p class="resume text-center">This is a short block of text describing the stats above. It provides additional info which helps explain. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis lacus eu felis finibus, sed accumsan dui sollicitudin</p>
+            <h1 class="title t2 dark-green center">OUR <span class="pine-cone">SERVICES</span></h1>
+            <p class="resume text-center pine-cone">This is a short block of text describing the stats above. It provides additional info which helps explain. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis lacus eu felis finibus, sed accumsan dui sollicitudin</p>
         </div>
         <!--One Day Content-->
         <div class="oneDayContent">
@@ -36,7 +36,7 @@ $vacationLoop = new WP_Query( $vacationArgs );
                         <div class="col-sm-4">
                             <a href="<?php echo get_permalink() ?>">
                                 <img class="imgServCarousel" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
-                                <h1 class="title t5 black"><?php the_title() ?></h1>
+                                <h1 class="title t5 black tour-name"><?php the_title() ?></h1>
                                 <p class="text img-sumary dark-green"><?php echo get_the_excerpt() ?></p>
                             </a>
                         </div>

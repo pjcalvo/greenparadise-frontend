@@ -26,7 +26,6 @@ if( have_posts() ){the_post();}
     </div>
     <div class="content-medium">
         <h1 class="title t2 green text-center">AWESOME <span class="black"> DESTINATIONS</span></h1>
-        <p class="text main-text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc urna lectus, porta sed sodales convallis, tempus et velit. Nunc tristique vel eros quis placerat. Nam molestie, turpis et commodo pellentesque, ex nulla auctor augue, non mattis tellus justo sed ligula. Integer aliquet, arcu vel mollis vulputate, lacus ante cursus lorem, nec aliquet justo erat vitae lectus. Nulla malesuada non odio non tempus.</p>
         <div class="header-select">
             <div class="center">
                 <label class="lbl_selectpicker">SELECT DESTINATION</label>
