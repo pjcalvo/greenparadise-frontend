@@ -3,11 +3,11 @@
  
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
-    <div class="item active">
-      <img src="/wp-content/themes/greenparadise/assets/img/Slider1.png">
+    <div class="item active item1">
+      <img src="">
     </div>
-    <div class="item">
-      <img src=/wp-content/themes/greenparadise/assets/img/Slider2.png>
+    <div class="item item2">
+      <img src="">
     </div>
   </div>
   <div class="carousel-content">
