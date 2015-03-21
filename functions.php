@@ -25,6 +25,7 @@ require_once locate_template('/post-types/vacation_package.php');// Vacation Pac
 require_once locate_template('/post-types/hotel.php');// Hotel
 require_once locate_template('/post-types/destination.php');// Destinations
 require_once locate_template('/post-types/ourTeam.php');// Our Team
+require_once locate_template('/post-types/location.php');// Contact Us Location
 
 /*Post 2 Posts relations */
 require_once locate_template('/post-types/relations/post2post.php');          // Custom functions

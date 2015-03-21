@@ -13,12 +13,10 @@ if( have_posts() ){the_post();}
     </div>
     <div class="contactContent content-medium">
         <h1 class="title t2 white text-center blue-cerulean">CONTACT <span class="pine-cone"> US</span></h1>
-        <p class="text t-paragraph center"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+        <p class="text t-paragraph center"><?php echo get_the_content() ?></p>
         
         <?php echo do_shortcode( '[contact-form-7 id="114" title="ContactUs"]') ?>
     </div>
-    <hr>
     <?php get_template_part('templates/letsTalk', 'page'); ?>
-    <hr>
     <?php get_template_part('templates/ourLocation', 'page'); ?>
 </div>

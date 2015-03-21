@@ -6,21 +6,6 @@ var ExampleSite = {
     common: {
         init: function() {
             // JS here
-            function initialize() {
-              var myLatlng = new google.maps.LatLng(9.902042,-83.994452);
-  var mapOptions = {
-    zoom: 15,
-    center: myLatlng
-  }
-  var map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
-
-  var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title: 'Hello World!'
-  });
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
         },
         finalize: function() { }
     },
@@ -40,6 +25,12 @@ var ExampleSite = {
     about_us: {
         init: function() {
             // JS here
+        }
+    },
+
+    contact_us:{
+        init: function() {
+            contactUs.Map();
         }
     }
 };
@@ -99,7 +90,7 @@ var destination = {
             },
             dataType: "json",
             success: function (response) {
-                
+
                 $("#destCarouselContainer").empty();
 
                 if(response.length === 0){
@@ -127,9 +118,9 @@ var destination = {
                     }
 
                     htmlResult += '</div>';
-                    
+
                     $("#destCarouselContainer").html(htmlResult);
-                    
+
                     if(index < 4)
                     {
                         $('.carousel-control').hide();
@@ -142,6 +133,40 @@ var destination = {
             }
         });
     }
-}
+};
+
+var contactUs = {
+
+    Map: function(){
+
+        $.ajax({
+            url: AjaxUtil.url,
+            type: "POST",
+            data: {
+                nonce: AjaxUtil.nonce,
+                action: "get_map_location",
+            },
+            dataType: "json",
+            success: function (response) {
+                google.maps.event.addDomListener(window, 'load', initialize(response[0].latitud, response[0].longitud));
+            }
+        });
+    }};
+
+function initialize(latitude, longitude) {
+    var myLatlng = new google.maps.LatLng(latitude,longitude);
+    var mapOptions = {
+        zoom: 15,
+        center: myLatlng
+    }
+    var map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
+
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: 'Green Paradise'
+    });
+};
+
 
 $(document).ready(UTIL.loadEvents);

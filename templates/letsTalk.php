@@ -1,6 +1,7 @@
-<div class="letsTalk row">
+<div class="letsTalk container">
+    <hr>
     <h1 class="title t4 white text-center blue-cerulean">LET'S <span class="pine-cone"> TALK</span></h1>
-    <div class="container">
+    <div class="row">
         <div class="col-sm-4">
             <h1 class="title t5 center">Phone:</h1>
             <p class="text t-paragraph center">(506)8811 2222</p>
@@ -17,4 +18,5 @@
             <p class="text t-paragraph center">Lorem Ipsu dolor sit amet</p>
         </div>
     </div>
+    <hr>
 </div>

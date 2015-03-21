@@ -4,6 +4,9 @@ add_action('wp_ajax_nopriv_get_featured_destinations', 'ajax_get_featured_destin
 add_action('wp_ajax_get_featured_destinations', 'ajax_get_featured_destinations');
 
 
+add_action('wp_ajax_nopriv_get_map_location', 'ajax_get_map_location');
+add_action('wp_ajax_get_map_location', 'ajax_get_map_location');
+
 /******************************* Featured Destination Filter *******************************/
 
 function ajax_get_featured_destinations() {
@@ -52,6 +55,52 @@ function ajax_get_featured_destinations() {
                 'description' => $description,
                 'thumbnail' => $thumbnail,
                 'link' => $link,
+            );
+
+            array_push($result, $item);
+        }
+
+        wp_reset_postdata();
+    }
+    
+    echo json_encode($result);
+    exit;
+};
+
+/******************************* Location Map *******************************/
+
+function ajax_get_map_location() {
+    $nonce = $_POST['nonce'];
+
+    if (!wp_verify_nonce($nonce,'myajax-post-comment-nonce')) {
+        die(); 
+    }
+    
+    $result = array();
+
+    $args = $args = array(
+        'post_type' => 'page',//it is a Page right?
+        'post_status' => 'publish',
+        'meta_query' => array(
+            array(
+                'key' => '_wp_page_template',
+                'value' => 'template-contactUs.php', // template name as stored in the dB
+            )
+        )
+    );
+
+    $query = new WP_Query($args);
+
+    if ( $query->have_posts() ){
+        while ( $query->have_posts() ){
+            $query->the_post();
+
+            $latitude = get_field('latitud');
+            $longitude = get_field('longitud');
+            
+            $item = array(
+                'latitud' => $latitude,
+                'longitud' => $longitude,
             );
 
             array_push($result, $item);
