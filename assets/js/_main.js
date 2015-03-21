@@ -6,6 +6,21 @@ var ExampleSite = {
     common: {
         init: function() {
             // JS here
+            function initialize() {
+              var myLatlng = new google.maps.LatLng(9.902042,-83.994452);
+  var mapOptions = {
+    zoom: 15,
+    center: myLatlng
+  }
+  var map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
+
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'Hello World!'
+  });
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
         },
         finalize: function() { }
     },

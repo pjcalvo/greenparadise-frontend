@@ -17,3 +17,4 @@ if( have_posts() ){the_post();}
     <?php get_template_part('templates/ourTeam', 'page'); ?>
     <?php get_template_part('templates/destinations', 'page'); ?>
 </div>
+
