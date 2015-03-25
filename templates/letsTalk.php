@@ -4,18 +4,17 @@
     <div class="row">
         <div class="col-sm-4">
             <h1 class="title t5 center">Phone:</h1>
-            <p class="text t-paragraph center">(506)8811 2222</p>
-            <p class="text t-paragraph center">(506)7014 2211</p>
+            <p class="text t-paragraph center">(506) 8798-8181</p>
+            <p class="text t-paragraph center">(506) 8982-1377</p>
         </div>
         <div class="col-sm-4">
             </p><h1 class="title t5 center">Email:</h1>
-            <p class="text t-paragraph center">name@email.com</p>
-            <p class="text t-paragraph center">name@email.com</p>
+            <p class="text t-paragraph center">sgonzalez@greenparadisecostarica.com</p>
+            <p class="text t-paragraph center">imadrigal@greenparadisecostarica.com</p>
         </div>
         <div class="col-sm-4">
-            </p><h1 class="title t5 center">Address:</h1>
-            <p class="text t-paragraph center">Lorem Ipsu dolor sit amet</p>
-            <p class="text t-paragraph center">Lorem Ipsu dolor sit amet</p>
+            </p><h1 class="title t5 center">Skype:</h1>
+            <p class="text t-paragraph center">greenparadisecr</p>
         </div>
     </div>
     <hr>
