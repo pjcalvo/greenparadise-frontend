@@ -27,6 +27,7 @@ require_once locate_template('/post-types/destination.php');// Destinations
 require_once locate_template('/post-types/ourTeam.php');// Our Team
 require_once locate_template('/post-types/location.php');// Contact Us Location
 require_once locate_template('/post-types/services.php');// Services
+require_once locate_template('/post-types/otherServices.php');// Services
 
 /*Post 2 Posts relations */
 require_once locate_template('/post-types/relations/post2post.php');          // Custom functions

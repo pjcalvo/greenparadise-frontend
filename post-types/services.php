@@ -28,6 +28,17 @@ if(function_exists("register_field_group"))
 				'rows' => '',
 				'formatting' => 'br',
 			),
+            array (
+				'key' => 'field_550e3d593dbd797',
+				'label' => 'Other Services Excerpt',
+				'name' => 'other_services_excerpt',
+				'type' => 'textarea',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'br',
+			),
 		),
 		'location' => array (
 			array (

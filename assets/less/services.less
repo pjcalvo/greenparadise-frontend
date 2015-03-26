@@ -1,85 +1,89 @@
-.services .contactServices {
-    
-    margin-bottom: 60px;
-    
-    .pageSumary {
-        padding: 20px 40px;
+.services {
+    padding-bottom: 30px;
 
-        .title { padding-bottom: 20px; }
+    .contactServices {
+        margin-bottom: 60px;
 
-        .text { line-height: 40px; }
-    }
+        .pageSumary {
+            padding: 20px 40px;
 
-    .oneDayGrayHeader,.vacationHeader {
-        width: 100%;
-        padding: 40px 80px 10px 80px;
+            .title { padding-bottom: 20px; }
 
-        .title { padding-bottom: 20px; }
+            .text { line-height: 40px; }
+        }
 
-        .text { line-height: 40px; }
-    }
-    .oneDayGrayHeader{
-        margin-top: 50px;
-        box-shadow: 0px 0px 25px 0px #ccc;
-    }
+        .oneDayGrayHeader, .vacationHeader {
+            width: 100%;
+            padding: 40px 80px 10px 80px;
 
-    .carouselContent {
-        width: 100%;
-        display: inline-table;
-        background-color: @color-white;
+            .title { padding-bottom: 20px; }
 
-        .carousel {
+            .text { line-height: 40px; }
+        }
+
+        .oneDayGrayHeader {
+            margin-top: 50px;
+            box-shadow: 0px 0px 25px 0px #ccc;
+        }
+
+        .carouselContent {
             width: 100%;
             display: inline-table;
+            background-color: @color-white;
 
-            .carousel-inner {
-                .item {
-                    padding: 0px 70px;
+            .carousel {
+                width: 100%;
+                display: inline-table;
 
-                    img { 
-                        width: 300px;
-                        height: 170px;
-                    }
+                .carousel-inner {
+                    .item {
+                        padding: 0px 70px;
 
-                    .subItem {
-                        height: 250px;
-                        padding-top: 15px;
-                        padding-bottom: 15px;
-                    }
-                }
+                        img {
+                            width: 300px;
+                            height: 170px;
+                        }
 
-                .carousel-control {
-                    width: 5%;
-
-                    &.right {
-                        right: 4%;
-                        background-image: none;
-
-                        span {
-                            right: 0px;
-                            font-size: 80px;
-                            color: @color-pine-cone;
+                        .subItem {
+                            height: 250px;
+                            padding-top: 15px;
+                            padding-bottom: 15px;
                         }
                     }
 
-                    &.left {
-                        left: 4%;
-                        background-image: none;
+                    .carousel-control {
+                        width: 5%;
+
+                        &.right {
+                            right: 4%;
+                            background-image: none;
+
+                            span {
+                                right: 0px;
+                                font-size: 80px;
+                                color: @color-pine-cone;
+                            }
+                        }
+
+                        &.left {
+                            left: 4%;
+                            background-image: none;
+
+                            span {
+                                left: 0px;
+                                font-size: 80px;
+                                color: @color-pine-cone;
+                            }
+                        }
 
                         span {
-                            left: 0px;
-                            font-size: 80px;
-                            color: @color-pine-cone;
+                            top: 35%;
+                            z-index: 5;
+                            font-size: 50px;
+                            position: absolute;
+                            font-family: initial;
+                            display: inline-block;
                         }
-                    }
-
-                    span {
-                        top: 35%;
-                        z-index: 5;
-                        font-size: 50px;
-                        position: absolute;
-                        font-family: initial;
-                        display: inline-block;
                     }
                 }
             }
