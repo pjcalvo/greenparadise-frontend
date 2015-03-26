@@ -105,9 +105,9 @@ if(function_exists("register_field_group"))
 		'location' => array (
 			array (
 				array (
-					'param' => 'post_type',
+					'param' => 'page_template',
 					'operator' => '==',
-					'value' => 'destination',
+					'value' => 'template-destinations.php',
 					'order_no' => 0,
 					'group_no' => 0,
 				),

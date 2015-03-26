@@ -41,9 +41,9 @@ if(function_exists("register_field_group"))
 		'location' => array (
 			array (
 				array (
-					'param' => 'page',
+					'param' => 'page_template',
 					'operator' => '==',
-					'value' => '112',
+					'value' => 'template-contactUs.php',
 					'order_no' => 0,
 					'group_no' => 0,
 				),

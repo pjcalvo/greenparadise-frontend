@@ -32,9 +32,9 @@ if(function_exists("register_field_group"))
 		'location' => array (
 			array (
 				array (
-					'param' => 'page',
+					'param' => 'page_template',
 					'operator' => '==',
-					'value' => '121',
+					'value' => 'template-services.php',
 					'order_no' => 0,
 					'group_no' => 0,
 				),
