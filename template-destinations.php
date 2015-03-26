@@ -57,7 +57,7 @@ if( have_posts() ){the_post();}
                         </div><div class="item">
                         <?php endif;?>
                         <div class="col-sm-4">
-                                <img src="<php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
+                                <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
                                 <div class="blue-cerulean">
                                     <!--<span class="price center">$<php echo get_field('destination_price') ?><sup>PER PERSON</sup></span>-->
                                     <span class="place center"><?php the_title() ?></span>
