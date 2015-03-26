@@ -27,19 +27,21 @@
             </div>
             <div class="col-sm-3">
                 <div class= "footer-column">
-                    <h4>Lorem Ipsum</h4>
-                    <p>This is a short describing the lorem impsum</p>
+                    <h4>Phone</h4>
+                    <p>(506) 8798-8181</p>
+                    <p>(506) 8982-1377</p>
                 </div>
             </div>
             <div class="col-sm-3">
               <div class= "footer-column">
-                   <h4>Lorem Ipsum</h4>
-                    <p>This is a short describing the lorem impsum</p>
+                   <h4>Email</h4>
+                    <p>sgonzalez@greenparadisecostarica.com</p>
+                    <p>imadrigal@greenparadisecostarica.com</p>
                 </div>
             </div>
             <div class="col-sm-3">
-              <div class= "footer-column"> <h4>Lorem Ipsum</h4>
-                    <p>This is a short describing the lorem impsum</p>
+              <div class= "footer-column skype-column"> <h4>Skype</h4>
+                    <p>greenparadisecr</p>
                 </div>
             </div>
         </div>
