@@ -30,7 +30,7 @@ require_once locate_template('/post-types/services.php');// Services
 require_once locate_template('/post-types/otherServices.php');// Services
 
 /*Post 2 Posts relations */
-require_once locate_template('/post-types/relations/post2post.php');          // Custom functions
+require_once locate_template('/post-types/post2post.php');          // Custom functions
 
 /* Add Logo Field*/
 add_action( 'customize_register', 'themename_customize_register' );
