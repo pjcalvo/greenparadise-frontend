@@ -27,8 +27,8 @@ $vacationLoop = new WP_Query( $vacationArgs );
                     <?php $count = 0 ?>
                     <div class="item active">
                         <?php while ( $loop->have_posts() ) : $loop->the_post(); 
-                        $count++; 
-                        if($count >= 4):
+                         
+                        if($count >= 3):
                         $count = 0;
                         ?>
                         </div><div class="item">
@@ -40,7 +40,7 @@ $vacationLoop = new WP_Query( $vacationArgs );
                                 <p class="text img-sumary dark-green"><?php echo get_the_excerpt() ?></p>
                             </a>
                         </div>
-                    <?php endwhile; // end of the loop. 
+                    <?php $count++; endwhile; // end of the loop. 
                     ?>
                     </div>
 
@@ -65,8 +65,8 @@ $vacationLoop = new WP_Query( $vacationArgs );
                     <?php $count = 0 ?>
                     <div class="item active">
                         <?php while ( $vacationLoop->have_posts() ) : $vacationLoop->the_post(); 
-                        $count++; 
-                        if($count >= 4):
+                        
+                        if($count >= 3):
                         $count = 0;
                         ?>
                         </div><div class="item">
@@ -78,7 +78,7 @@ $vacationLoop = new WP_Query( $vacationArgs );
                                 <p class="text img-sumary dark-green"><?php echo get_the_excerpt() ?></p>
                             </a>
                         </div>
-                    <?php endwhile; // end of the loop. 
+                    <?php $count++;  endwhile; // end of the loop. 
                     ?>
                     </div>
 

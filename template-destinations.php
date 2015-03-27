@@ -50,8 +50,8 @@ if( have_posts() ){the_post();}
                     <div class="item active">
                         
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); 
-                        $count++; 
-                        if($count >= 4):
+                         
+                        if($count >= 3):
                         $count = 0;
                         ?>
                         </div><div class="item">
@@ -72,7 +72,7 @@ if( have_posts() ){the_post();}
                                 </div>
                             </div>
                     
-                        <?php endwhile; // end of the loop. 
+                        <?php $count++; endwhile; // end of the loop. 
                         ?>
                         </div>
                     </div>

@@ -46,8 +46,8 @@ if( have_posts() ){the_post();}
                     ?>
                     <div class="item active">
                         <?php while ( $loop->have_posts() ) : $loop->the_post(); 
-                        $count++; 
-                        if($count >= 7):
+                        
+                        if($count >= 6):
                         $count = 0;
                         $showControl = true;
                         ?>
@@ -60,7 +60,7 @@ if( have_posts() ){the_post();}
                                 <p class="text img-sumary pine-cone"><?php echo get_the_excerpt() ?></p>
                             </a>
                         </div>
-                    <?php endwhile; // end of the loop. 
+                    <?php $count++; endwhile; // end of the loop. 
                     ?>
                     </div>
 
@@ -89,8 +89,8 @@ if( have_posts() ){the_post();}
                     ?>
                     <div class="item active">
                         <?php while ( $vacationLoop->have_posts() ) : $vacationLoop->the_post(); 
-                        $count++; 
-                        if($count >= 7):
+                         
+                        if($count >= 6):
                         $count = 0;
                         $showControl = true;
                         ?>
@@ -103,7 +103,7 @@ if( have_posts() ){the_post();}
                                 <p class="text img-sumary pine-cone"><?php echo get_the_excerpt() ?></p>
                             </a>
                         </div>
-                    <?php endwhile; // end of the loop. 
+                    <?php $count++; endwhile; // end of the loop. 
                     ?>
                     </div>
 
@@ -132,8 +132,8 @@ if( have_posts() ){the_post();}
                     ?>
                     <div class="item active">
                         <?php while ( $otherServicesLoop->have_posts() ) : $otherServicesLoop->the_post(); 
-                        $count++; 
-                        if($count >= 7):
+                        
+                        if($count >= 6):
                         $count = 0;
                         $showControl = true;
                         ?>
@@ -146,7 +146,7 @@ if( have_posts() ){the_post();}
                                 <p class="text img-sumary pine-cone"><?php echo get_the_excerpt() ?></p>
                             </a>
                         </div>
-                    <?php endwhile; // end of the loop. 
+                    <?php $count++; endwhile; // end of the loop. 
                     ?>
                     </div>
 
