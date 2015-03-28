@@ -46,7 +46,7 @@ if(function_exists("register_field_group"))
 				'type' => 'text',
 				'default_value' => '',
 				'placeholder' => '',
-				'prepend' => '',
+				'prepend' => '$',
 				'append' => '',
 				'formatting' => 'html',
 				'maxlength' => '',
@@ -64,11 +64,32 @@ if(function_exists("register_field_group"))
 				'max' => '',
 				'step' => '',
 			),
+            array (
+				'key' => 'field_55172d174cfa7',
+				'label' => 'Hotels',
+				'name' => 'vacation_hotels',
+				'type' => 'relationship',
+				'return_format' => 'object',
+				'post_type' => array (
+					0 => 'hotel',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'filters' => array (
+					0 => 'search',
+				),
+				'result_elements' => array (
+					0 => 'post_type',
+					1 => 'post_title',
+				),
+				'max' => '',
+			),
 			array (
 				'key' => 'field_54c481b562fec',
 				'label' => 'Includes:',
 				'name' => 'includes',
-				'type' => 'wysiwyg',
+				'type' => 'wp_wysiwyg',
 				'default_value' => '',
 				'toolbar' => 'full',
 				'media_upload' => 'yes',

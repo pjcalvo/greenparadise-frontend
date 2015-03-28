@@ -9,6 +9,7 @@
 @import "destinations.less";
 @import "services.less";
 @import "hotel.less";
+@import "singles.less";
 
 @import "partials/destinations.less";
 @import "partials/moreservices.less";
@@ -248,7 +249,7 @@ h1.title {
     &.t7 { font-size: 12px; }
 }
 
-h2.subtitle {
+.subtitle {
     font-size: 26px;
     font-family: Gotham-Light;
 }
@@ -256,7 +257,7 @@ h2.subtitle {
 /* ==========================================================================
  Text
  ========================================================================== */
-p.text {
+.text {
     
     font-size: 16px;
     
@@ -400,6 +401,11 @@ p.text {
 }
 
 .text-center { align-content: center; }
+
+.text-justify, .text-justify > p{
+    text-align: justify;
+    text-justify: inter-word;
+}
 
 .alignleft { float: left; }
 

@@ -63,11 +63,11 @@ if(function_exists("register_field_group"))
 				'formatting' => 'html',
 				'maxlength' => '',
 			),
-			array (
-				'key' => 'field_54c48ed6bed31',
-				'label' => 'Description:',
+            array (
+				'key' => 'field_551720b2590b4',
+				'label' => 'Description',
 				'name' => 'description',
-				'type' => 'wysiwyg',
+				'type' => 'wp_wysiwyg',
 				'default_value' => '',
 				'toolbar' => 'full',
 				'media_upload' => 'no',
