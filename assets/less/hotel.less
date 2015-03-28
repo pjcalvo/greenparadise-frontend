@@ -1,0 +1,54 @@
+.hotels {
+    .sumary {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .hotelForm-content {
+        min-height: 400px;
+        padding: 40px 20%;
+        background-image: url(../img/HotelFormContent.png);
+
+        .form {
+            opacity: 0.7;
+            padding: 25px 50px;
+            min-height: 100px;
+            border-radius: 5px;
+            background-color: @color-black;
+
+            form {
+                width: 100%;
+                display: table;
+                font-size: 12px;
+                color: lightgray;
+                padding: 10px 20px;
+                font-family: Gotham-Bold;
+
+                input[type="text"], input[type="email"], input[type="date"], input[type="number"] {
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    .form-control();
+                }
+
+                label {
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+                }
+
+                input[type="submit"] {
+                    height: 100%;
+                    font-size: 13px;
+                    box-shadow: none;
+                    margin-top: 10px;
+                    margin-bottom: 20px !important;
+                    color: @color-white;
+                    font-family: Gotham-Bold;
+                    background-color: @color-dark-green;
+                    .btn();
+                }
+
+                .subContent p { .center(); }
+            }
+        }
+    }
+}
