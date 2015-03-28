@@ -3,6 +3,9 @@
 Template Name: Hotels Template
 */
 
+$taxonomy = 'hotel_province'; // this is the name of the taxonomy
+ $terms = get_terms( $taxonomy, 'orderby=count&hide_empty=1&parent=0' ); // for more details refer to codex please.
+
 if( have_posts() ){the_post();}
 ?>
 
@@ -20,10 +23,22 @@ if( have_posts() ){the_post();}
     </div>
     <div class="hotelForm-content">
         <div class="form white">
-            <h1 class="title t5 white">FORM HOTEL REQUEST</h1>
+            <h1 class="title t5 white">HOTEL REQUEST FORM<Hotel Request Form/h1>
             <?php echo do_shortcode( '[contact-form-7 id="166" title="Untitled"]' ); ?>
         </div>
     </div>
     <div class="hotelsContent content-medium">
+        <div class="hotelHeader text-center">
+            <h1 class="title t2 dark-green">HOTELS</h1>
+        </div>
+        <?php foreach ($terms as $term) : ?>
+        <div>
+        <h1 class="title t4 blue-cerulean"> <?php echo $term->name; ?></h1>
+        <?php $query = get_article_query($term->term_id); ?>
+            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+            <li><p class="text t-sumary pine-cone"><?php the_title(); ?></p></li>
+            <?php endwhile; ?> 
+        <?php endforeach; ?>
+        </div>
     </div>
 </div>

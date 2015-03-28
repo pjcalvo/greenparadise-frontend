@@ -7,7 +7,7 @@ function hotel_post_type() {
 					   array(
 						   'labels' => array(
 							   'name'               => 'Hotel',
-							   'singular_name'      => 'Package',
+							   'singular_name'      => 'Hotel',
 							   'add_new'            => 'Add New',
 							   'add_new_item'       => 'Add New Hotel',
 							   'edit_item'          => 'Edit Hotel',
@@ -30,4 +30,52 @@ function hotel_post_type() {
 					  );
 }
 
+/**
+ * Hotel Province taxonomy for Hotels post type.
+ *
+ */
+function create_hotel_taxonomies() {
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              => 'Province Category',
+		'singular_name'     => 'Province Category',
+		'search_items'      => 'Search Province Categories',
+		'all_items'         => 'All Province Categorys',
+		'parent_item'       => 'Parent Province Category',
+		'parent_item_colon' => 'Parent Province Category:',
+		'edit_item'         => 'Edit Province Category',
+		'update_item'       => 'Update Province Category',
+		'add_new_item'      => 'Add New Province Category',
+		'new_item_name'     => 'New Province Category Name',
+		'menu_name'         => 'Province Categories',
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => false,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'hotel-province' ),
+	);
+
+	register_taxonomy( 'hotel_province', array( 'hotel' ), $args );
+}
+
 add_action( 'init', 'hotel_post_type' );
+add_action( 'init', 'create_hotel_taxonomies', 0 );
+
+
+function get_article_query($term_id) {
+	$args = array(
+		'hotel' => 'post',
+		'tax_query' => array(
+			array(
+				'taxonomy' => 'hotel_province',
+				'field' => 'term_id',
+				'terms' => $term_id
+			)
+		)
+	);
+	return new WP_Query($args);
+}

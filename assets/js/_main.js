@@ -32,6 +32,14 @@ var ExampleSite = {
         init: function() {
             contactUs.Map();
         }
+    },
+    
+    services:{
+        init: function() {
+            carouserNormalize('#carousel-oneDay');
+            carouserNormalize('#carousel-vacations');
+            carouserNormalize('#carousel-otherServices');
+        }
     }
 };
 
@@ -168,5 +176,56 @@ function initialize(latitude, longitude) {
     });
 };
 
+$.fn.carouselHeights = function() {
+
+    var items = $(this), //grab all slides
+        heights = [], //create empty array to store height values
+        tallest; //create variable to make note of the tallest slide
+    var subItems = $(this).children( ".subItem" );
+    var hItem;
+    var normalizeHeights = function() {
+        
+        subItems.each(function() { //add heights to array
+            heights.push($(this).height()); 
+        });
+        
+        tallest = Math.max.apply(null, heights); //cache largest value
+        
+        subItems.each(function() {
+            $(this).css('min-height',tallest + 'px');
+        });
+        /**/
+        
+        if(items.length > 1){
+            hItem = tallest * 2;
+            
+            items.each(function() {
+                $(this).css('min-height',hItem + 'px');
+            });
+        }
+        
+        
+    };
+
+    normalizeHeights();
+
+    $(window).on('resize orientationchange', function () {
+        //reset vars
+        tallest = 0;
+        heights.length = 0;
+
+        items.each(function() {
+            $(this).css('min-height','0'); //reset min-height
+        }); 
+        normalizeHeights(); //run it again 
+    });
+
+};
+
+function carouserNormalize(carousel){
+    
+    //var carouselItem = carousel + ' .item';
+    //$(carouselItem).carouselHeights();
+}
 
 $(document).ready(UTIL.loadEvents);
