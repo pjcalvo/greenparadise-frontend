@@ -104,13 +104,18 @@ body { font-family: 'Gotham'; }
 
 .nav-pills>li>a {
     font-size: 13px;
-    font-weight: 700;
+    font-family: Gotham-Light;
     text-align: center;
-    color: @color-black;
+    color: @color-pine-cone;
     line-height: 26.827px;
     font-family: Gotham-Book;
     padding: 5px 25px 0px 15px;
     border-radius: 0px;
+    
+    &:hover{
+        color: @color-lightgray;
+    }
+    
 
     span {
         display: block;
@@ -132,7 +137,7 @@ body { font-family: 'Gotham'; }
 
 }
 
-.nav-pills>li+li { margin-left: 35px; }
+.nav-pills>li+li { margin-left: 45px; }
 
 .logo a {
     box-shadow: none;

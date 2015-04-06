@@ -52,5 +52,3 @@ function themename_customize_register($wp_customize) {
 		'settings'   => 'custom_logo',
 	) ) );
 }
-
-include_once('D:/Wordpress/GreenParadise/htdocs/wp-content/plugins/acf-wp-wysiwyg/acf-wp_wysiwyg.php');

@@ -22,7 +22,7 @@ function custom_post_type() {
 						   ),
                            'menu_icon' => 'dashicons-palmtree',
 						   'public' => true,
-						   'has_archive' => true,
+						   'has_archive' => false,
 						   'rewrite' => array('slug' => 'vacation-package'),
 						   'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'excerpt', 'comments' ),
 						   'add_new' => 'Add Package',

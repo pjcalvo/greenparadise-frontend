@@ -57,7 +57,7 @@ if( have_posts() ){the_post();}
                             <a href="<?php echo get_permalink() ?>">
                                 <img class="imgServCarousel" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
                                 <h1 class="title t6 dark-green tour-name"><?php the_title() ?></h1>
-                                <p class="text img-sumary pine-cone"><?php echo get_the_excerpt() ?></p>
+                                
                             </a>
                         </div>
                     <?php $count++; endwhile; // end of the loop. 
@@ -100,7 +100,7 @@ if( have_posts() ){the_post();}
                             <a href="<?php echo get_permalink() ?>">
                                 <img class="imgServCarousel" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
                                 <h1 class="title t6 dark-green tour-name"><?php the_title() ?></h1>
-                                <p class="text img-sumary pine-cone"><?php echo get_the_excerpt() ?></p>
+                            
                             </a>
                         </div>
                     <?php $count++; endwhile; // end of the loop. 
@@ -143,7 +143,7 @@ if( have_posts() ){the_post();}
                             <a href="<?php echo get_permalink() ?>">
                                 <img class="imgServCarousel" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
                                 <h1 class="title t6 dark-green tour-name"><?php the_title() ?></h1>
-                                <p class="text img-sumary pine-cone"><?php echo get_the_excerpt() ?></p>
+                               
                             </a>
                         </div>
                     <?php $count++; endwhile; // end of the loop. 

@@ -17,7 +17,6 @@
         <div class="text-center">
             <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
         </div>
-        <label><h2>Price:    </h2> </label><span class="subtitle">    $<?php echo get_field("destination_price"); ?></span>
         <div class="text t-paragraph text-justify"><?php echo the_field("destination_description"); ?></div>
     </div>
 </div>

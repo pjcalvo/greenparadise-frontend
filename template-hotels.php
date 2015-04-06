@@ -32,11 +32,12 @@ if( have_posts() ){the_post();}
             <h1 class="title t2 dark-green">HOTELS</h1>
         </div>
         <?php foreach ($terms as $term) : ?>
-        <div>
-        <h1 class="title t4 blue-cerulean"> <?php echo $term->name; ?></h1>
+        <div class="province-list">
+        <h1 class="province-title title t4 blue-cerulean"> <?php echo $term->name; ?></h1>
         <?php $query = get_article_query($term->term_id); ?>
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-            <li><p class="text t-sumary pine-cone"><?php the_title(); ?></p></li>
+            <div class = "hotel-item col-sm-4"><img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
+                <p class="text title t6 dark-green"><?php the_title(); ?></p></div>
             <?php endwhile; ?> 
         <?php endforeach; ?>
         </div>

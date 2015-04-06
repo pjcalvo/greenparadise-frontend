@@ -1,9 +1,9 @@
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
     <div class="container">
-        <div class="logo col-sm-2 col-sm-offset-1">
+        <div class="logo col-sm-2">
                 <a href="/"><img src="<?php echo get_theme_mod('custom_logo') ?>" ?></a>
         </div>
-        <div class="nav-container col-sm-8">
+        <div class="nav-container col-sm-10">
             <nav class="collapse navbar-collapse" role="navigation">
                 <?php
                   if (has_nav_menu('primary_navigation')) :
