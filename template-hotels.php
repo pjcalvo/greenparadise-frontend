@@ -22,7 +22,7 @@ if( have_posts() ){the_post();}
         </div>
     </div>
     <div class="hotelForm-content">
-        <div class="form white">
+        <div class="form white content-medium">
             <h1 class="title t5 white">HOTEL REQUEST FORM<Hotel Request Form/h1>
             <?php echo do_shortcode( '[contact-form-7 id="166" title="Untitled"]' ); ?>
         </div>
