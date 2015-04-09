@@ -81,7 +81,8 @@ if( have_posts() ){the_post();}
 
                     <a class="right carousel-control" href="#dest_carousel" role="button" data-slide="next"><span>›</span></a>
                 </div>
-            </div>
+            </div>    
         </div>
+    <?php get_template_part('templates/ourMemories'); ?>
     </div>
 </div>
