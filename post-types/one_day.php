@@ -71,6 +71,15 @@ if(function_exists("register_field_group"))
 				'default_value' => '',
 				'toolbar' => 'full',
 				'media_upload' => 'no',
+			),
+            array (
+				'key' => 'field_551720b259sdf4',
+				'label' => 'Includes',
+				'name' => 'OneDayincludes',
+				'type' => 'wp_wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'no',
 			)
 		),
 		'location' => array (
