@@ -160,4 +160,4 @@ if( have_posts() ){the_post();}
         </div>
     </div>
 </div>
-<?php get_template_part('templates/moreservices'); ?>
+<?php get_template_part('templates/moreServices'); ?>

@@ -12,7 +12,7 @@
              <div class="col-xs-3 service" id= "transport-offers">
                  <h1>TRANSPORTATION<br><span>OFFERS</span></h1>
                  <p>This is a short block of text describing the stats above. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                 <a href="">Read More ></a>
+                 <a href="/transportation/">Read More ></a>
              </div>
              <div class="col-xs-3 service" id= "ecoturism-offers">
                  <h1>ECOTURISM<br><span>OFFERS</span></h1>

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: OtherServices Template
+Template Name: Transportation Template
 */
 
 if( have_posts() ){the_post();}
