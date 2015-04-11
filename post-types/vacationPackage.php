@@ -1,7 +1,7 @@
 <?php 
 /* ==================================== Vacation Package =========================================*/
 
-function custom_post_type() {
+function vacationPackage_post_type() {
 
 	register_post_type( 'vacationPackage',
 					   array(
@@ -23,20 +23,20 @@ function custom_post_type() {
                            'menu_icon' => 'dashicons-palmtree',
 						   'public' => true,
 						   'has_archive' => false,
-						   'rewrite' => array('slug' => 'vacation-package'),
+						   'rewrite' => array('slug' => 'vacationPackage'),
 						   'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'excerpt', 'comments' ),
 						   'add_new' => 'Add Package',
 					   )
 					  );
 }
 
-add_action( 'init', 'custom_post_type' );
+add_action( 'init', 'vacationPackage_post_type' );
 
 /* ============================ Vacation Package Custome Field =================================*/
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
-		'id' => 'acf_vacation-packages',
+		'id' => 'acf_vacationPackage',
 		'title' => 'Vacation Packages',
 		'fields' => array (
 			array (
@@ -93,6 +93,15 @@ if(function_exists("register_field_group"))
 				'default_value' => '',
 				'toolbar' => 'full',
 				'media_upload' => 'yes',
+			),
+            array (
+				'key' => 'field_551720b25SDFb4',
+				'label' => 'Description',
+				'name' => 'packageDescription',
+				'type' => 'wp_wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'no',
 			),
 		),
 		'location' => array (

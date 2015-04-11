@@ -13,7 +13,8 @@ if( have_posts() ){the_post();}
         </div>
     </div>
     <div class="center">
-            <h1 class="title t4 text-center blue-cerulean">CHOOSE <span class="pine-cone"> YOUR TRANSPORTATION</span></h1>
+        <div class="busIcon float-left"></div>
+        <h1 class="title t4 text-center blue-cerulean float-right">CHOOSE <span class="pine-cone"> YOUR TRANSPORTATION</span></h1>
     </div>
     <br>
     <div class="text t-paragraph text-justify">
