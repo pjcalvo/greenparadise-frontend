@@ -6,23 +6,23 @@
          <div class="container content services-list center">
              <div class="col-xs-3 service"id= "hotel-offers"> 
                  <h1>HOTEL<br><span>OFFERS</span></h1>
-                 <p>This is a short block of text describing the stats above. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                 <a href="">Read More ></a>
+                 <p></p>
+                 <a href="/hotels/">Read More ></a>
              </div>
              <div class="col-xs-3 service" id= "transport-offers">
                  <h1>TRANSPORTATION<br><span>OFFERS</span></h1>
-                 <p>This is a short block of text describing the stats above. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                 <p></p>
                  <a href="/transportation/">Read More ></a>
              </div>
              <div class="col-xs-3 service" id= "ecoturism-offers">
                  <h1>ECOTURISM<br><span>OFFERS</span></h1>
-                 <p>This is a short block of text describing the stats above. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                 <a href="">Read More ></a>
+                 <p></p>
+                 <a href="/eco-turism/">Read More ></a>
              </div>
              <div class="col-xs-3 service" id= "emigration-offers"> 
                  <h1>OTHER SERVICES<br><span>OFFERS</span></h1>
-                 <p>This is a short block of text describing the stats above. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                 <a href="">Read More ></a>
+                 <p></p>
+                 <a href="/other-services/">Read More ></a>
              </div>
         </div>
     </div>

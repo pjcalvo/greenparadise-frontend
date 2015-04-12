@@ -3,20 +3,20 @@
  $wp_query->the_post();
 ?>
 
-<div class="single">
+<div class="single content-medium">
     <div class="text-center singleHeader">
             <h1 class="title t4 text-justify blue-cerulean">VACATION <span> PACKAGE</span></h1>
             <br>
-            <p class="text t-paragraph text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.</p>
+            <p class="text t-paragraph text-justify">All our vacation packages are meant to deliver the best experience in Costa Rica, all our customers will enjoy the beauty of Costa Rica, and will remember it forever.</p>
     </div>
     <div class="content-medium">
         <hr><br>
-        <div class="text-center">
-            <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
-        </div>
-        <div class="col-sm-12">
+        <div class="">
             <h1 class="title t4_1"><?php echo get_the_title() ?></h1>
-            <p class"text t-paragraph"><?php echo get_the_excerpt() ?></p>
+            <p class"text t-paragraph"><?php echo the_field("packageDescription"); ?></p>
+        </div>
+        <div class="text-center">
+            <img class = "single-image" src="" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>')">
         </div>
         <div class="row">
             <div class="col-sm-4">
@@ -39,7 +39,7 @@
                 <?php endforeach; ?>
             </div>
             <div class="col-sm-4">
-                <h1 class="title t4_2 dark-green">Number of Nights:</h1>
+                <h1 class="title t4_2 dark-green">NUMBER OF NIGHTS:</h1>
                 <h1 class="title t1_1 blue-cerulean"><?php echo get_field("number_nights"); ?></h1>
                 <h1 class="title t4_2 dark-green">PRICE:</h1>
                 </label>
@@ -50,9 +50,9 @@
             </div>
         </div>
         <br><br>
-        <div class="col-sm-12">
-            <h1 class="title t4_3">MORE DESCRIPTION</h1>
-            <div class="text t-paragraph text-justify"><?php echo the_field("packageDescription"); ?></div>
+        <div class="">
+            <h1 class="title t4_3">DETAILS</h1>
+            <div class="text t-paragraph text-justify"><?php echo get_the_excerpt() ?></div>
         </div>
     </div>
 </div>
