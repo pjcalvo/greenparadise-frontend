@@ -3,13 +3,13 @@
  $wp_query->the_post();
 ?>
 
-<div class="single">
+<div class="single content-medium">
     <div class="text-center singleHeader">
             <h1 class="title t4 text-justify dark-green">ONE DAY <span> TOUR</span></h1>
             <br>
             <p class="text t-paragraph text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.</p>
     </div>
-    <div class="content-medium">
+    <div>
         <hr><br>
         <div class="text-center">
             <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
