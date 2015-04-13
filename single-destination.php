@@ -15,32 +15,13 @@ $moreDescription = get_field("destination_description");
     </div>
     <div>
         <hr><br>
-        <div class="text-center">
-            <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
-        </div>
-        <div class="col-sm-12">
+        <div class="text t-paragraph">
             <h1 class="title t4_1"><?php echo get_the_title() ?></h1>
-            <p class"text t-paragraph"><?php echo get_the_excerpt() ?></p>
+            <p class"text t-paragraph"><?php echo $moreDescription ?></p>
         </div>
-        <div class="row">
-            <div class="col-sm-5 col-sm-offset-1">
-                <h1 class="title t4_2 dark-green">PACKAGE DETAILS:</h1>
-                <br>
-                <h1 class="title t5">INCLUDES:</h1>
-                <div class="text t-paragraph">
-                    <?php echo get_field("destination_includes"); ?>
-                </div>
-            </div>
-            <div class="col-sm-5 col-sm-offset-1">
-                <h1 class="title t4_2 dark-green">PRICE:</h1>
-                <br>
-                </label>
-                <h1 class="title t1_1 blue-cerulean"><span>$</span><?php echo get_field("destination_price"); ?>
-                    <sup class="t12">PER PERSON</sup>
-                </h1>
-                <button type="button" class="btn btn-green">BUY THIS TOUR</button>
-            </div>
-        </div>    
+        <div class="text-center">
+            <img class = "single-image" src="" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>')">
+        </div>  
         <br><br>
      <!-- One Day Carousel -->
     <?php if($oneDayTours): ?>
@@ -135,10 +116,6 @@ $moreDescription = get_field("destination_description");
         </div>
         <?php endif ?>
         <br><br>
-        <div class="col-sm-12">
-            <h1 class="title t4_3">MORE DESCRIPTION</h1>
-            <div class="text t-paragraph text-justify"><?php echo $moreDescription ?></div>
-        </div>
     </div>
 </div>
 <?php get_template_part('templates/destinations', 'page'); ?>
