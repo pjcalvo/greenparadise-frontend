@@ -88,6 +88,48 @@ if(function_exists("register_field_group"))
 				'max' => '',
 				'step' => '',
 			),
+            array (
+				'key' => 'field_5529dc1847b85',
+				'label' => 'One Day Tour',
+				'name' => 'one_day_tour',
+				'type' => 'relationship',
+				'return_format' => 'object',
+				'post_type' => array (
+					0 => 'oneday',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'filters' => array (
+					0 => 'search',
+				),
+				'result_elements' => array (
+					0 => 'post_type',
+					1 => 'post_title',
+				),
+				'max' => '',
+			),
+			array (
+				'key' => 'field_5529dca747b86',
+				'label' => 'Vacation Package',
+				'name' => 'vacation_package',
+				'type' => 'relationship',
+				'return_format' => 'object',
+				'post_type' => array (
+					0 => 'vacationpackage',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'filters' => array (
+					0 => 'search',
+				),
+				'result_elements' => array (
+					0 => 'post_type',
+					1 => 'post_title',
+				),
+				'max' => '',
+			),
 			array (
 				'key' => 'field_54fb70694dc3c',
 				'label' => 'Description',

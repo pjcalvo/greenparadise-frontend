@@ -30,13 +30,14 @@
             <div class="col-sm-4">
                 <?php $hotels = get_field('vacation_hotels'); ?>
                 <h1 class="title t4_2 dark-green">HOTELS:</h1>
+                <?php if($hotels): ?>
                 <br>
                 <?php foreach( $hotels as $hotel): // variable must be called $post (IMPORTANT) ?>
                 <?php setup_postdata($hotel); ?>
                 <li class="subtitle">
                     <?php print_r($hotel->post_title) ?>
                 </li>
-                <?php endforeach; ?>
+                <?php endforeach; endif;?>
             </div>
             <div class="col-sm-4">
                 <h1 class="title t4_2 dark-green">NUMBER OF NIGHTS:</h1>
