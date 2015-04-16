@@ -5,12 +5,17 @@ $loop = new WP_Query( $args );
 $vacationArgs = array( 'post_type' => 'vacationPackage', 'posts_per_page' => -1);
 $vacationLoop = new WP_Query( $vacationArgs );
 
+$moreServicesArgs = array( 'post_type' => 'otherService', 'posts_per_page' => -1);
+$moreServicesLoop = new WP_Query( $moreServicesArgs );
+
+
 ?>
 
 <div class="container ourServicesSection" id="ourServices">
     <div class="content content-medium center">
         <div class="center ourServicesHeader">
             <h1 class="title t2 dark-green center">OUR <span class="pine-cone">SERVICES</span></h1>
+            <p class="resume text-center pine-cone">This is a short block of text describing the stats above. It provides additional info which helps explain. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis lacus eu felis finibus, sed accumsan dui sollicitudin</p>
         </div>
         <!--One Day Content-->
         <div class="oneDayContent">
@@ -83,6 +88,42 @@ $vacationLoop = new WP_Query( $vacationArgs );
                     <!-- Controls -->
                     <a class="left carousel-control" href="#carousel-vacations" role="button" data-slide="prev"><span>‹</span></a>
                     <a class="right carousel-control" href="#carousel-vacations" role="button" data-slide="next"><span >›</span></a>
+                </div> <!-- Carousel -->
+            </div>
+        </div>
+         <!--MoreServices Content-->
+        <div class="moreServicesContent">
+            <div class="col-sm-3">
+                <h1 class="title t4 pine-cone">MORE <span class="pine-cone">SERVICES</span></h1>
+            </div>
+            <!-- Wrapper for slides -->
+            <div id="carousel-moreservices" class="row col-sm-9 carousel slide" data-ride="carousel">
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <?php $count = 0 ?>
+                    <div class="item active">
+                        <?php while ( $moreServicesLoop->have_posts() ) : $moreServicesLoop->the_post(); 
+                        
+                        if($count >= 3):
+                        $count = 0;
+                        ?>
+                        </div><div class="item">
+                        <?php endif;?>    
+                        <div class="col-sm-4">
+                            <a href="<?php echo get_permalink() ?>">
+                                <img class="imgServCarousel" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
+                                <h1 class="title t5 black"><?php the_title() ?></h1>
+                                <p class="text img-sumary dark-green"><?php echo get_the_excerpt() ?></p>
+                            </a>
+                        </div>
+                    <?php $count++;  endwhile; // end of the loop. 
+                    ?>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-moreservices" role="button" data-slide="prev"><span>‹</span></a>
+                    <a class="right carousel-control" href="#carousel-moreservices" role="button" data-slide="next"><span >›</span></a>
                 </div> <!-- Carousel -->
             </div>
         </div>
