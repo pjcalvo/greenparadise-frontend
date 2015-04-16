@@ -7,11 +7,10 @@ $vacationLoop = new WP_Query( $vacationArgs );
 
 ?>
 
-<div class="container ourServicesSection" id="ourservices">
+<div class="container ourServicesSection" id="ourServices">
     <div class="content content-medium center">
         <div class="center ourServicesHeader">
             <h1 class="title t2 dark-green center">OUR <span class="pine-cone">SERVICES</span></h1>
-            <p class="resume text-center pine-cone">This is a short block of text describing the stats above. It provides additional info which helps explain. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis lacus eu felis finibus, sed accumsan dui sollicitudin</p>
         </div>
         <!--One Day Content-->
         <div class="oneDayContent">
@@ -55,7 +54,6 @@ $vacationLoop = new WP_Query( $vacationArgs );
         <div class="vacationPackContent">
             <div class="col-sm-3">
                 <h1 class="title t4 blue-cerulean">VACATION <span class="blue-cerulean">PACKAGES</span></h1>
-                <p class="one-resume">This is a short block of text describing the stats above.</p>
             </div>
             <!-- Wrapper for slides -->
             <div id="carousel-vacations" class="row col-sm-9 carousel slide" data-ride="carousel">

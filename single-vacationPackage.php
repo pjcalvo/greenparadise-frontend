@@ -7,7 +7,6 @@
     <div class="text-center singleHeader">
             <h1 class="title t4 text-justify blue-cerulean">VACATION <span> PACKAGE</span></h1>
             <br>
-            <p class="text t-paragraph text-justify">All our vacation packages are meant to deliver the best experience in Costa Rica, all our customers will enjoy the beauty of Costa Rica, and will remember it forever.</p>
     </div>
     <div class="content-medium">
         <hr><br>

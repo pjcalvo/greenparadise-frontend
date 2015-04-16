@@ -7,7 +7,6 @@
     <div class="text-center singleHeader">
             <h1 class="title t4 text-justify dark-green">HOTEL<span> </span></h1>
             <br>
-            <p class="text t-paragraph text-justify">All of our hotels have been strictly choosed to deliver the best experience to the tourists</p>
     </div>
     <div>
         <hr><br>
