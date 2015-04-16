@@ -44,14 +44,12 @@ function ajax_get_featured_destinations() {
             $query->the_post();
 
             $title = get_the_title();
-            $price = get_field('destination_price');
-            $description = get_field('destination_description');
+            $description = substr(get_field('destination_description'),0,110) . '...';
             $thumbnail = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
             $link = get_permalink();
             
             $item = array(
                 'title' => $title,
-                'price' => $price,
                 'description' => $description,
                 'thumbnail' => $thumbnail,
                 'link' => $link,

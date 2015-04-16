@@ -10,10 +10,11 @@
       <img src="">
     </div>
   </div>
+    
   <div class="carousel-content">
       <p class="center text t-sumary">ENJOY THE PARADISE</p>
       <h1 class="title t1 center">WELCOME TO COSTA RICA</h1>
-      <p><button class="center round primary">GET STARTED</button></p>
+      <p><a href="#ourservices" onclick="return false;" onmousedown="autoScrollTo('ourservices');"><button class="center round primary">GET STARTED</button></a></p>
   </div>
  
   <!-- Controls -->

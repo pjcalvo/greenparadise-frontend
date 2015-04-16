@@ -116,9 +116,9 @@ var destination = {
                         }
 
                         htmlResult += '<div class="col-sm-4"><img src="' + response[index].thumbnail + '"><div class="blue-cerulean">' +
-                            '<span class="price center">$' + response[index].price + '<sup>PER PERSON</sup></span><span class="place center">'
+                            '<span class="place center">'
                         + response[index].title + '</span></div><p class="text-center">' + response[index].description + 
-                            '</p><hr><div class="sect-foot"><label class="blue-cerulean t12">RESTRICTIONS APPLY</label>' +
+                            '</p><hr><div class="sect-foot">' +
                             '<a href="' + response[index].link + '"><button href type="button" class="btn btn-green">TAKE ME THERE</button></a>' +
                             '</div></div>';
 
@@ -226,6 +226,40 @@ function carouserNormalize(carousel){
     
     //var carouselItem = carousel + ' .item';
     //$(carouselItem).carouselHeights();
+}
+
+var scrollY = 2;
+var distance = 40;
+var speed = 2;
+
+function autoScrollTo(el) {
+  var currentY = window.pageYOffset;
+  var targetY = document.getElementById(el).offsetTop;
+  var bodyHeight = document.body.offsetHeight;
+  var yPos = currentY + window.innerHeight;
+  var animator = setTimeout('autoScrollTo(\'' + el + '\')', 24);
+  if (yPos > bodyHeight) {
+    clearTimeout(animator);
+  } else {
+    if (currentY < targetY - distance) {
+      scrollY = currentY + distance;
+      window.scroll(0, scrollY);
+    } else {
+      clearTimeout(animator);
+    }
+  }
+}
+
+function resetScroller(el) {
+  var currentY = window.pageYOffset;
+  var targetY = document.getElementById(el).offsetTop;
+  var animator = setTimeout('resetScroller(\'' + el + '\')', speed);
+  if (currentY > targetY) {
+    scrollY = currentY - distance;
+    window.scroll(0, scrollY);
+  } else {
+    clearTimeout(animator);
+  }
 }
 
 $(document).ready(UTIL.loadEvents);

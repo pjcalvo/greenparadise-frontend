@@ -59,10 +59,9 @@ if( have_posts() ){the_post();}
                         <div class="col-sm-4">
                                 <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
                                 <div class="blue-cerulean">
-                                    <!--<span class="price center">$<php echo get_field('destination_price') ?><sup>PER PERSON</sup></span>-->
                                     <span class="place center"><?php the_title() ?></span>
                                 </div>
-                                <!--<p class="text-center"><php echo get_field('destination_description') ?></p>-->
+                                <p class="text-center"><?php echo substr(get_field('destination_description'),0,110) . '...'; ?></p>
                                 <hr>
                                 <div class="sect-foot">
                                     <!--<label class="blue-cerulean t12">RESTRICTIONS APPLY</label>-->

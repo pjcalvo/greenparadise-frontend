@@ -11,7 +11,7 @@ $moreDescription = get_field("destination_description");
     <div class="text-center singleHeader">
             <h1 class="title t4 text-justify dark-green">DESTINATIONS</h1>
             <br>
-            <p class="text t-paragraph text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.</p>
+            <p class="text t-paragraph text-justify">A new adventure awaits in each destination</p>
     </div>
     <div>
         <hr><br>

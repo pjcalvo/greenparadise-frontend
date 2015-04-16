@@ -7,7 +7,7 @@ $vacationLoop = new WP_Query( $vacationArgs );
 
 ?>
 
-<div class="container ourServicesSection">
+<div class="container ourServicesSection" id="ourservices">
     <div class="content content-medium center">
         <div class="center ourServicesHeader">
             <h1 class="title t2 dark-green center">OUR <span class="pine-cone">SERVICES</span></h1>
