@@ -14,7 +14,7 @@ if( have_posts() ){the_post();}
     </div>
     <div class="other-service-title float-left">
         <div class="float-left busIcon"></div>
-        <h1 class="title t4 blue-cerulean"><?php get_the_title() ?>MORE SERVICES</h1>
+        <h1 class="title t4 blue-cerulean"><?php the_title() ?></h1>
     </div>
     <br><hr class="float-left"><br>
     <div class="text t-paragraph text-justify float-left">

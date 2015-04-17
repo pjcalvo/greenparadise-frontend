@@ -228,6 +228,25 @@ function carouserNormalize(carousel){
     //$(carouselItem).carouselHeights();
 }
 
+function adjustSliderHeight(){
+    var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+    
+    console.log(y + "px");
+    
+    var myElements = document.querySelectorAll(".img-carousel");
+ 
+    for (var i = 0; i < myElements.length; i++) {
+        myElements[i].style.height = y  + "px";
+    }
+    
+}
+
+window.onload = adjustSliderHeight();
+
 var scrollY = 2;
 var distance = 40;
 var speed = 2;

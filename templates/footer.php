@@ -47,4 +47,17 @@
         </div>
     </div>  
 </footer>
+        <script>
+            
+            $(window).scroll(function () {
+                if( $(window).scrollTop() > 100   ){
+                      $('.banner').css({'background-color':'rgba(1,1,1,0.7)'});
+                
+                
+            }else if ($(window).scrollTop() <= 0){
+                     $('.banner').css({'background-color':'rgba(1,1,1,0.2)'});
+            }}
+            );
+        
+        </script>
 <?php wp_footer(); ?>

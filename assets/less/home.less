@@ -1,7 +1,7 @@
 /*============================== Carousel =============================*/
 .bannerSlider.carousel {
     
-    height: 800px;
+    height: 100%;
     
     .carousel-inner { position: relative; 
         height: 100%;
@@ -20,7 +20,7 @@
         max-width: 100%;
     }
     .carousel-content {
-        top: 290px;
+        top: 40%;
         left: 0;
         bottom: 0;
         width: 100%;
@@ -28,9 +28,15 @@
         color: @color-white;
         
         h1{
-            font-family: Gotham-Book;
-            font-size: 67px;
+            font-family: Gotham-Bold;
+            font-size: 70px;
         }
+    }
+    
+    .btn-getstarted{
+        padding-top: 16%;
+          position: relative;
+          height: 50%;
     }
 
     .carousel-control {
@@ -63,11 +69,14 @@
     }
     
     .item1{
-        background-image: url("/wp-content/themes/greenparadise/assets/img/Slider1.png");
+        background-image: url("/wp-content/themes/greenparadise/assets/img/slider-1.jpg");
     }
     
     .item2{
-        background-image: url("/wp-content/themes/greenparadise/assets/img/Slider2.png");
+        background-image: url("/wp-content/themes/greenparadise/assets/img/slider-2.jpg");
+    }
+    .item3{
+        background-image: url("/wp-content/themes/greenparadise/assets/img/slider-3.jpg");
     }
 }
 

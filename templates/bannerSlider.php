@@ -4,17 +4,21 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active item1">
-      <img src="">
+      <img class = "img-carousel" src="">
     </div>
     <div class="item item2">
-      <img src="">
+      <img class = "img-carousel"  src="">
+    </div>
+      <div class="item item3">
+      <img class = "img-carousel"  src="">
     </div>
   </div>
     
   <div class="carousel-content">
       <p class="center text t-sumary">ENJOY THE PARADISE</p>
       <h1 class="title t1 center">WELCOME TO COSTA RICA</h1>
-      <p><a href="#ourservices" onclick="return false;" onmousedown="autoScrollTo('ourservices');"><button class="center round primary">GET STARTED</button></a></p>
+      <p class="btn-getstarted"><a href="#ourservices" onclick="autoScrollTo('ourServices');" onmousedown="">
+          <button class="center round primary">GET STARTED</button></a></p>
   </div>
  
   <!-- Controls -->
