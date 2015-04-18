@@ -40,6 +40,11 @@ var ExampleSite = {
             carouserNormalize('#carousel-vacations');
             carouserNormalize('#carousel-otherServices');
         }
+    },
+    hotels:{
+        init: function() {
+            hotel.registerEvents();
+        }
     }
 };
 
@@ -137,6 +142,56 @@ var destination = {
                         $(".carousel-control").show();
                     }
 
+                }
+            }
+        });
+    }
+};
+
+var hotel = {
+
+    registerEvents: function() {
+
+        /* Init Destination Filter*/
+        $('#hotelFilter').selectpicker();
+
+        /* Our Customer Filter Event */
+        $("#hotelFilter").change(function() {
+            var categoryID = $('#hotelFilter').selectpicker().val();
+            var optionName = $('#hotelFilter option:selected').selectpicker().text();
+            
+            hotel.hotelFilter(categoryID, optionName);
+        });
+    },
+
+    hotelFilter: function(categoryID, categoryName) {
+
+        $.ajax({
+            url: AjaxUtil.url,
+            type: "POST",
+            data: {
+                nonce: AjaxUtil.nonce,
+                action: "get_featured_hotels",
+                category_id: categoryID,
+            },
+            dataType: "json",
+            success: function (response) {
+
+                $(".hotelContainer").empty();
+
+                if(response.length === 0){
+                    $('.control-container').hide();
+                    $(".hotelContainer").html('<h3>No results</h3>');
+                }else{
+                    var htmlResult = '<h1 class="hotel-title title t4 blue-cerulean">' + categoryName + '</h1>';
+                    var index;
+                    for (index = 0; index < response.length; index++) {
+
+                        htmlResult += '<div class = "hotel-item col-sm-4"><img src="' + response[index].thumbnail + '">' +
+                        '<p class="text title t6 dark-green">'+ response[index].title +'</p></div>';
+                    }
+
+                    $(".hotelContainer").html(htmlResult);
                 }
             }
         });
