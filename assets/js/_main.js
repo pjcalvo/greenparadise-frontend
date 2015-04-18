@@ -5,7 +5,7 @@ var ExampleSite = {
     // All pages
     common: {
         init: function() {
-            // JS here
+            scrollColorDegraded();
         },
         finalize: function() { }
     },
@@ -33,7 +33,7 @@ var ExampleSite = {
             contactUs.Map();
         }
     },
-    
+
     services:{
         init: function() {
             carouserNormalize('#carousel-oneDay');
@@ -159,7 +159,7 @@ var hotel = {
         $("#hotelFilter").change(function() {
             var categoryID = $('#hotelFilter').selectpicker().val();
             var optionName = $('#hotelFilter option:selected').selectpicker().text();
-            
+
             hotel.hotelFilter(categoryID, optionName);
         });
     },
@@ -188,7 +188,7 @@ var hotel = {
                     for (index = 0; index < response.length; index++) {
 
                         htmlResult += '<div class = "hotel-item col-sm-4"><img src="' + response[index].thumbnail + '">' +
-                        '<p class="text title t6 dark-green">'+ response[index].title +'</p></div>';
+                            '<p class="text title t6 dark-green">'+ response[index].title +'</p></div>';
                     }
 
                     $(".hotelContainer").html(htmlResult);
@@ -239,27 +239,27 @@ $.fn.carouselHeights = function() {
     var subItems = $(this).children( ".subItem" );
     var hItem;
     var normalizeHeights = function() {
-        
+
         subItems.each(function() { //add heights to array
             heights.push($(this).height()); 
         });
-        
+
         tallest = Math.max.apply(null, heights); //cache largest value
-        
+
         subItems.each(function() {
             $(this).css('min-height',tallest + 'px');
         });
         /**/
-        
+
         if(items.length > 1){
             hItem = tallest * 2;
-            
+
             items.each(function() {
                 $(this).css('min-height',hItem + 'px');
             });
         }
-        
-        
+
+
     };
 
     normalizeHeights();
@@ -278,26 +278,26 @@ $.fn.carouselHeights = function() {
 };
 
 function carouserNormalize(carousel){
-    
+
     //var carouselItem = carousel + ' .item';
     //$(carouselItem).carouselHeights();
 }
 
 function adjustSliderHeight(){
     var w = window,
-    d = document,
-    e = d.documentElement,
-    g = d.getElementsByTagName('body')[0],
-    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
-    
+        d = document,
+        e = d.documentElement,
+        g = d.getElementsByTagName('body')[0],
+        y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
     console.log(y + "px");
-    
+
     var myElements = document.querySelectorAll(".img-carousel");
- 
+
     for (var i = 0; i < myElements.length; i++) {
         myElements[i].style.height = y  + "px";
     }
-    
+
 }
 
 window.onload = adjustSliderHeight();
@@ -307,33 +307,44 @@ var distance = 40;
 var speed = 2;
 
 function autoScrollTo(el) {
-  var currentY = window.pageYOffset;
-  var targetY = document.getElementById(el).offsetTop;
-  var bodyHeight = document.body.offsetHeight;
-  var yPos = currentY + window.innerHeight;
-  var animator = setTimeout('autoScrollTo(\'' + el + '\')', 24);
-  if (yPos > bodyHeight) {
-    clearTimeout(animator);
-  } else {
-    if (currentY < targetY - distance) {
-      scrollY = currentY + distance;
-      window.scroll(0, scrollY);
+    var currentY = window.pageYOffset;
+    var targetY = document.getElementById(el).offsetTop;
+    var bodyHeight = document.body.offsetHeight;
+    var yPos = currentY + window.innerHeight;
+    var animator = setTimeout('autoScrollTo(\'' + el + '\')', 24);
+    if (yPos > bodyHeight) {
+        clearTimeout(animator);
     } else {
-      clearTimeout(animator);
+        if (currentY < targetY - distance) {
+            scrollY = currentY + distance;
+            window.scroll(0, scrollY);
+        } else {
+            clearTimeout(animator);
+        }
     }
-  }
 }
 
 function resetScroller(el) {
-  var currentY = window.pageYOffset;
-  var targetY = document.getElementById(el).offsetTop;
-  var animator = setTimeout('resetScroller(\'' + el + '\')', speed);
-  if (currentY > targetY) {
-    scrollY = currentY - distance;
-    window.scroll(0, scrollY);
-  } else {
-    clearTimeout(animator);
-  }
+    var currentY = window.pageYOffset;
+    var targetY = document.getElementById(el).offsetTop;
+    var animator = setTimeout('resetScroller(\'' + el + '\')', speed);
+    if (currentY > targetY) {
+        scrollY = currentY - distance;
+        window.scroll(0, scrollY);
+    } else {
+        clearTimeout(animator);
+    }
+}
+
+function scrollColorDegraded(){
+    $(window).scroll(function () {
+        if( $(window).scrollTop() > 100   ){
+            $('.banner').css({'background-color':'rgba(1,1,1,0.7)'});
+
+
+        }else if ($(window).scrollTop() <= 0){
+            $('.banner').css({'background-color':'rgba(1,1,1,0.2)'});
+    }});
 }
 
 $(document).ready(UTIL.loadEvents);
