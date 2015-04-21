@@ -79,3 +79,49 @@ function get_article_query($term_id) {
 	);
 	return new WP_Query($args);
 }
+
+/* ============================== Hotel Custom Fields ===================================*/
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_hotel',
+		'title' => 'Hotel',
+		'fields' => array (	
+			array (
+				'key' => 'field_54h48e0cbed30',
+				'label' => 'Price:',
+				'name' => 'hotel_price',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			)
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'hotel',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+				0 => 'the_content',
+				1 => 'discussion',
+				2 => 'comments',
+				3 => 'author',
+				4 => 'categories',
+			),
+		),
+		'menu_order' => 0,
+	));
+}

@@ -5,7 +5,16 @@ Template Name: Transportation Template
 
 if( have_posts() ){the_post();}
 
-$otherServicesArgs = array( 'post_type' => 'otherService', 'posts_per_page' => 3);
+$otherServicesArgs = array( 'hotel' => 'otherService', 
+                           'posts_per_page' => 3,
+                           'tax_query' => array(
+			                 array(
+				                'taxonomy' => 'otherService_category',
+				                'field' => 'slug',
+				                'terms' => 'transportation'
+			                     )
+		                      )
+                          );
 $otherServicesLoop = new WP_Query( $otherServicesArgs );
 
 ?>

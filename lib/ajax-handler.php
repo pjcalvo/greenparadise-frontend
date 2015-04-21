@@ -151,11 +151,13 @@ function ajax_get_featured_hotels() {
             $query->the_post();
 
             $title = get_the_title();
+            $permalink = get_permalink();
             $thumbnail = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
             
             $item = array(
                 'title' => $title,
-                'thumbnail' => $thumbnail
+                'thumbnail' => $thumbnail,
+                'permalink' => $permalink
             );
 
             array_push($result, $item);

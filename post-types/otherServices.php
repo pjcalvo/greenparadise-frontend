@@ -30,7 +30,41 @@ function otherService_post_type() {
 					  );
 }
 
+
+/**
+ * Other Service Category taxonomy for Other Service post type.
+ *
+ */
+function create_otherService_taxonomies() {
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              => 'Other Service Category',
+		'singular_name'     => 'Other Service Category',
+		'search_items'      => 'Search Other Service Categories',
+		'all_items'         => 'All Other Service Categorys',
+		'parent_item'       => 'Parent Other Service Category',
+		'parent_item_colon' => 'Parent Other Service Category:',
+		'edit_item'         => 'Edit Other Service Category',
+		'update_item'       => 'Update Other Service Category',
+		'add_new_item'      => 'Add New Other Service Category',
+		'new_item_name'     => 'New Other Service Category Name',
+		'menu_name'         => 'Other Service Categories',
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => false,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'otherService-category' ),
+	);
+
+	register_taxonomy( 'otherService_category', array( 'otherservice' ), $args );
+}
+
 add_action( 'init', 'otherService_post_type' );
+add_action( 'init', 'create_otherService_taxonomies', 0 );
 
 /* ============================== Other Services Custom Fields ===================================*/
 if(function_exists("register_field_group"))
@@ -78,7 +112,7 @@ if(function_exists("register_field_group"))
 				array (
 					'param' => 'post_type',
 					'operator' => '==',
-					'value' => 'otherservice',
+					'value' => 'otherService',
 					'order_no' => 0,
 					'group_no' => 0,
 				),

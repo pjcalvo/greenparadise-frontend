@@ -187,7 +187,7 @@ var hotel = {
                     var index;
                     for (index = 0; index < response.length; index++) {
 
-                        htmlResult += '<div class = "hotel-item col-sm-4"><img src="' + response[index].thumbnail + '">' +
+                        htmlResult += '<a href="'+ response[index].permalink +'"><div class = "hotel-item col-sm-4"><img src="' + response[index].thumbnail + '">' +
                             '<p class="text title t6 dark-green">'+ response[index].title +'</p></div>';
                     }
 

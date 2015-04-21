@@ -4,6 +4,19 @@ Template Name: MoreServices Template
 */
 
 if( have_posts() ){the_post();}
+
+$otherServicesArgs = array( 'hotel' => 'otherService', 
+                           'posts_per_page' => 3,
+                           'tax_query' => array(
+			                 array(
+				                'taxonomy' => 'otherService_category',
+				                'field' => 'slug',
+				                'terms' => 'others'
+			                     )
+		                      )
+                          );
+$otherServicesLoop = new WP_Query( $otherServicesArgs );
+
 ?>
 
 <div class="content-medium">
@@ -22,5 +35,53 @@ if( have_posts() ){the_post();}
     </div>
     
 </div>
+<div class="services transportation-page">
+    <div class=" contactServices content-medium">
+    <!-- Other Services -->
+            <div class="carouselContent">
+                <div class="vacationHeader">
+                    <h1 class="title t2 pine-cone">OTHER <span> SERVICES</span></h1>
+                    <p class="text t-paragraph"><?php echo $otherService?></p>
+                </div>
+                <div id="carousel-otherServices" class="row carousel slide" data-ride="carousel">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <?php 
+                            $count = 0;
+                            $showControl = false;
+                        ?>
+                        <div class="item active">
+                            <?php while ( $otherServicesLoop->have_posts() ) : $otherServicesLoop->the_post(); 
+
+                            if($count >= 6):
+                            $count = 0;
+                            $showControl = true;
+                            ?>
+                            </div><div class="item">
+                            <?php endif;?>    
+                            <div class="subItem col-sm-4">
+                                <a href="<?php echo get_permalink() ?>">
+                                    <img class="imgServCarousel" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
+                                    <h1 class="title t6 dark-green tour-name"><?php the_title() ?></h1>
+
+                                </a>
+                            </div>
+                        <?php $count++; endwhile; // end of the loop. 
+                        ?>
+                        </div>
+
+                        <!-- Controls -->
+                        <?php if($showControl): ?>
+                            <a class="left carousel-control" href="#carousel-otherServices" role="button" data-slide="prev"><span>‹</span></a>
+                            <a class="right carousel-control" href="#carousel-otherServices" role="button" data-slide="next"><span >›</span></a>
+                        <?php endif; ?>
+                    </div> <!-- Carousel -->
+                </div>
+            </div>
+
+    </div>
+</div>
+
 <br><br>
 <?php get_template_part('templates/destinations', 'page'); ?>

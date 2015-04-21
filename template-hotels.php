@@ -46,8 +46,8 @@ if( have_posts() ){the_post();}
                         <h1 class="hotel-title title t4 blue-cerulean"> <?php echo $term->name; ?></h1>
                         <?php $query = get_article_query($term->term_id); ?>
                         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-                        <div class = "hotel-item col-sm-4"><img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
-                            <p class="text title t6 dark-green"><?php the_title(); ?></p></div>
+                        <a href="<?php echo get_permalink() ?>"><div class = "hotel-item col-sm-4"><img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>">
+                            <p class="text title t6 dark-green"><?php the_title(); ?></p></div></a>
                         <?php endwhile; ?> 
                     </div>
                         <?php break; endforeach; ?>
