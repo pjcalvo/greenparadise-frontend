@@ -6,6 +6,7 @@ var ExampleSite = {
     common: {
         init: function() {
             scrollColorDegraded();
+            commun.registerElement();
         },
         finalize: function() { }
     },
@@ -64,6 +65,18 @@ var UTIL = {
             UTIL.fire(classnm);
         });
 
+    }
+};
+
+var commun = {
+    registerElement: function(){
+    
+    $( ".modalbtn" ).click(function() {
+        var title = $(this).data( "title" );
+        console.log(title);
+        console.log($(this));
+        $("input[name='tour-name']").val(title);
+    });
     }
 };
 
