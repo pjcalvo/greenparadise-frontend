@@ -33,7 +33,7 @@
                 <h1 class="title t1_1 blue-cerulean"><span>$</span><?php echo get_field("oneday_price"); ?>
                     <sup class="t12">PER PERSON</sup>
                 </h1>
-                <button type="button" class="btn btn-green">BUY THIS TOUR</button>
+            <button type="button" class="btn btn-green" data-toggle="modal" data-target="#buyModal">BUY THIS TOUR</button>
             </div>
         </div>
         <br><br>
@@ -44,3 +44,4 @@
     </div>
 </div>
 <?php get_template_part('templates/destinations', 'page'); ?>
+<?php get_template_part('templates/modalBuy', 'page'); ?>
