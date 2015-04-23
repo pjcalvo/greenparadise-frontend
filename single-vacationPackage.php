@@ -33,7 +33,7 @@
                 <br>
                 <?php foreach( $hotels as $hotel): // variable must be called $post (IMPORTANT) ?>
                 <?php setup_postdata($hotel); ?>
-                <li class="subtitle">
+                <li class="text t-paragraph">
                     <?php print_r($hotel->post_title) ?>
                 </li>
                 <?php endforeach; endif;?>
