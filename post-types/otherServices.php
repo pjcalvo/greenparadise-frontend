@@ -70,8 +70,8 @@ add_action( 'init', 'create_otherService_taxonomies', 0 );
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
-		'id' => 'acf_otherServices',
-		'title' => 'Other Service',
+		'id' => 'acf_test',
+		'title' => 'test',
 		'fields' => array (
 			array (
 				'key' => 'field_54c48df9bed2f',
@@ -112,7 +112,7 @@ if(function_exists("register_field_group"))
 				array (
 					'param' => 'post_type',
 					'operator' => '==',
-					'value' => 'otherService',
+					'value' => 'otherservice',
 					'order_no' => 0,
 					'group_no' => 0,
 				),
@@ -122,11 +122,19 @@ if(function_exists("register_field_group"))
 			'position' => 'normal',
 			'layout' => 'no_box',
 			'hide_on_screen' => array (
-				0 => 'the_content',
-				1 => 'discussion',
-				2 => 'comments',
-				3 => 'author',
-				4 => 'categories',
+				0 => 'permalink',
+				1 => 'the_content',
+				2 => 'excerpt',
+				3 => 'custom_fields',
+				4 => 'discussion',
+				5 => 'comments',
+				6 => 'revisions',
+				7 => 'slug',
+				8 => 'author',
+				9 => 'format',
+				10 => 'categories',
+				11 => 'tags',
+				12 => 'send-trackbacks',
 			),
 		),
 		'menu_order' => 0,
