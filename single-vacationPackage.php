@@ -10,9 +10,9 @@
     </div>
     <div class="content-medium">
         <hr><br>
-        <div class="">
+        <div class="text t-paragraph">
             <h1 class="title t4_1"><?php echo get_the_title() ?></h1>
-            <p class"text t-paragraph"><?php echo the_field("packageDescription"); ?></p>
+            <p class""><?php echo the_field("packageDescription"); ?></p>
         </div>
         <div class="text-center">
             <img class = "single-image" src="" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id()) ?>')">

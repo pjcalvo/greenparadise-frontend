@@ -51,6 +51,18 @@ if(function_exists("register_field_group"))
 				'formatting' => 'html',
 				'maxlength' => '',
 			),
+            array (
+				'key' => 'field_54c41ad12dd30',
+				'label' => 'Tour Price:',
+				'name' => 'tourprice',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
 			array (
 				'key' => 'field_54c48e0cbed30',
 				'label' => 'Price:',

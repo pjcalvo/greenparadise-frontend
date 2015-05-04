@@ -15,8 +15,8 @@
   </div>
     
   <div class="carousel-content">
-      <p class="center text t-sumary">ENJOY THE PARADISE</p>
-      <h1 class="title t1 center">WELCOME TO COSTA RICA</h1>
+      <p class="center text t-sumary text-center">ENJOY THE PARADISE</p>
+      <h1 class="title t1 center text-center">WELCOME TO COSTA RICA</h1>
       <p class="btn-getstarted"><a href="#ourservices" onclick="autoScrollTo('ourServices');" onmousedown="">
           <button class="center round primary">GET STARTED</button></a></p>
   </div>

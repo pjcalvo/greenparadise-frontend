@@ -15,13 +15,13 @@ $moreServicesLoop = new WP_Query( $moreServicesArgs );
     <div class="content content-medium center">
         <div class="center ourServicesHeader">
             <h1 class="title t2 dark-green center">OUR <span class="pine-cone">SERVICES</span></h1>
-            <p class="resume text-center pine-cone">This is a short block of text describing the stats above. It provides additional info which helps explain. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis lacus eu felis finibus, sed accumsan dui sollicitudin</p>
+            <p class="resume text-center pine-cone"></p>
         </div>
         <!--One Day Content-->
         <div class="oneDayContent">
             <div class="col-sm-3">
                 <h1 class="title t4 dark-green">ONE DAY <span class="green">TOURS</span></h1>
-                <p class="one-resume">This is a short block of text describing the stats above.</p>
+                <p class="one-resume"></p>
             </div>
             <!-- Wrapper for slides -->
             <div id="carousel-oneDay" class="row col-sm-9 carousel slide" data-ride="carousel">

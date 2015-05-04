@@ -1,7 +1,7 @@
 <div class="frog">
     <!--Explore our Trips-->
     <div class="exploreSection center">
-        <h1 class="title t2 center">A D V E N T U R E&nbsp&nbsp<span> I S &nbsp E V E R Y W H E R E</span></h1>
+        <h1 class="title t2 center text-center">A D V E N T U R E&nbsp&nbsp<span> I S &nbsp E V E R Y W H E R E</span></h1>
         <a href="/services/"><button class="round btn-green center">EXPLORE OUR TRIPS</button></a>
     </div>
     <!--About-->
