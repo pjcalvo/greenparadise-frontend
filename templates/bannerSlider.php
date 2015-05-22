@@ -16,10 +16,10 @@
     
   <div class="carousel-content">
       <p class="center text t-sumary text-center">ENJOY THE PARADISE</p>
-      <h1 class="title t1 center text-center">WELCOME TO COSTA RICA</h1>
-      <p class="btn-getstarted"><a href="#ourservices" onclick="autoScrollTo('ourServices');" onmousedown="">
-          <button class="center round primary">GET STARTED</button></a></p>
+      <h1 class="title t1 center text-center">WELCOME TO COSTA RICA</h1>    
   </div>
+  <p class="btn-getstarted"><a href="#ourservices" onclick="autoScrollTo('exploreSection');" onmousedown="">
+          <span class="center scroll-down-icon"></span></a></p>
  
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-banner" role="button" data-slide="prev"><span>‹</span></a>

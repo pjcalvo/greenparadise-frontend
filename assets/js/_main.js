@@ -356,7 +356,7 @@ function scrollColorDegraded(){
 
 
         }else if ($(window).scrollTop() <= 0){
-            $('.banner').css({'background-color':'rgba(1,1,1,0.2)'});
+            $('.banner').css({'background-color':'rgba(1,1,1,0.3);'});
     }});
 }
 

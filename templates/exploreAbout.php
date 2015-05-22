@@ -1,4 +1,4 @@
-<div class="frog">
+<div class="frog" id="exploreSection">
     <!--Explore our Trips-->
     <div class="exploreSection center">
         <h1 class="title t2 center text-center">A D V E N T U R E&nbsp&nbsp<span> I S &nbsp E V E R Y W H E R E</span></h1>
