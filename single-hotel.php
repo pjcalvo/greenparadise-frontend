@@ -29,5 +29,6 @@
             <div class="text t-paragraph text-justify"><?php echo get_the_excerpt() ?></div>
         </div>
     </div>
+<?php comments_template(); ?>
 </div>
 <?php get_template_part('templates/destinations', 'page'); ?>
